@@ -1,0 +1,21 @@
+NEUROGRAM - SITE RESTAURADO
+
+Para deploy público rápido:
+
+OPÇÃO 1 - NETLIFY DROP (MAIS RÁPIDO - 30 segundos)
+1. Acesse: https://app.netlify.com/drop
+2. Arraste a pasta "neurogram-webflow" 
+3. Pronto! Você terá uma URL pública tipo: https://seu-site-random.netlify.app
+
+OPÇÃO 2 - VERCEL (2 minutos)
+1. Commit para GitHub
+2. Acesse: https://vercel.com
+3. Import do repositório
+4. Deploy automático
+
+OPÇÃO 3 - GITHUB PAGES (Gratuito, permanente)
+1. Crie repositório público no GitHub
+2. Ative GitHub Pages nas settings
+3. URL: seu-usuario.github.io/neurogram-webflow
+
+O site está 100% funcional e pronto para deploy!

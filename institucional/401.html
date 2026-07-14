@@ -1,0 +1,228 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Mar 18 2026 12:52:49 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="69b9a4612d5d32ccced9e0f6" data-wf-site="69b9a45f2d5d32ccced9e078" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Protected page</title>
+  <meta content="Protected page" property="og:title">
+  <meta content="Protected page" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/neurogram-2.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script type='text/javascript' src='https://api.netlify.com/7AE27YSMdN7XeB__iGq1fwopyz4uS7PSMJ2Xgjq0UYKrQin5tzqPp8EoMDg1OO3t4i37oKI7G2d6kJ6fMpbY5O9dTlq8Gy4N3zNYsWHNfbWJhMcAXI3FAtErhsuwk5ZvBQ7BPR2awP7LdjEuCmtoxRjFOzE22Hl9DyljswXS0F9wrbvLSJbFQtVwwNJf9jMUJgqOes7w6dKJDAG3RX4FD10e1tV3N7ehWaNNpGAjHnJEMKUa4qNAUjQja8D31Wq8HbTXDTrWitNlmIYedjjTNE4mCJo992E5DGsehOOSI5N51pP4AXG1EUDidIvTbMWhPOlTnjpI7U0poPT_Itl1i1hvnKBQgyuV0yyz0diNAZmuomNMkB9zSBXLg4zH1OCvg0Dtg-w-keBfXs9AxNlvDnf2AJ1P-ufaF5Z9WJ23-dJt1f7M4c9yzveYq1nCQSXYMFBl2dRwXdrQXSFtks3flBsQPKKl0rl8mu0rNgaugh4J9rRvFGa9laZn5wbKx8dIipQDXLpmqFbNbZEymA'></script><script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inter Tight:300,400,500,600,700","Material Icons:300,400,500,600,700"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+<body>
+  <div class="utility-page-wrap">
+    <div class="utility-page-content w-password-page w-form">
+      <form action="/.wf_auth" method="post" id="email-form" name="email-form" data-name="Email Form" class="utility-page-form w-password-page" data-wf-page-id="69b9a4612d5d32ccced9e0f6" data-wf-element-id="6771fcdc4a83ea262245316d00000000000c"><img src="https://d3e54v103j8qbb.cloudfront.net/static/utility-lock.ae54711958.svg" alt="">
+        <h3>Protected Page</h3><label for="pass" class="w-password-page">Password</label><input class="w-password-page w-input" autofocus="true" maxlength="256" name="pass" data-name="field" placeholder="Enter your password" type="password" id="pass"><input type="submit" data-wait="Please wait..." class="main-button w-password-page w-button" value="Submit">
+        <div class="w-password-page w-form-fail">
+          <div>Incorrect password. Please try again.</div>
+        </div>
+        <div style="display:none" class="w-password-page w-embed w-script"><input type="hidden" name="path" value="<%WF_FORM_VALUE_PATH%>"><input type="hidden" name="page" value="<%WF_FORM_VALUE_PAGE%>"></div>
+        <div style="display:none" class="w-password-page w-embed w-script">
+          <script type="application/javascript">(function _handlePasswordPageOnload() {
+	  if (/[?&]e=1(&|$)/.test(document.location.search)) {
+	    document.querySelector('.w-password-page.w-form-fail').style.display = 'block';
+	  }
+	})()</script>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69b9a45f2d5d32ccced9e078" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/gsap.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/Flip.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/ScrollTrigger.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/SplitText.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/CustomEase.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/CustomWiggle.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/CustomBounce.min.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.14.2/EasePack.min.js" type="text/javascript"></script>
+  <script type="text/javascript">gsap.registerPlugin(Flip,ScrollTrigger,SplitText,CustomEase,CustomWiggle,CustomBounce,EasePack);</script>
+  <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+  <script>
+// lenis smooth scroll
+{
+  let lenis;
+  const initScroll = () => {
+    lenis = new Lenis({});
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+  };
+  function initGsapGlobal() {
+    // Do everything that needs to happen
+    //  before triggering all
+    // the gsap animations 
+    initScroll();
+    // match reduced motion media
+    // const media = gsap.matchMedia();
+    // Send a custom
+    //  event to all your
+    // gsap animations
+    // to start them 
+    const sendGsapEvent = () => {
+      window.dispatchEvent(
+        new CustomEvent("GSAPReady", {
+          detail: {
+            lenis,
+          },
+        })
+      );
+    };
+    // Check if fonts are already loaded
+    if (document.fonts.status === "loaded") {
+      sendGsapEvent();
+    } else {
+      document.fonts.ready.then(() => {
+        sendGsapEvent();
+      });
+    }
+    // We need specific handling because the
+    // grid/list changes the scroll height of the whole container
+    //
+    let resizeTimeout;
+    const onResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 50);
+    };
+    window.addEventListener("resize", () => onResize());
+    const resizeObserver = new ResizeObserver((entries) => onResize());
+    resizeObserver.observe(document.body);
+    queueMicrotask(() => {
+      gsap.to("[data-start='hidden']", {
+        autoAlpha: 1,
+        duration: 0.1,
+        delay: 0.2,
+      });
+    });
+  }
+  // this only for dev
+  const documentReady =
+    document.readyState === "complete" || document.readyState === "interactive";
+  if (documentReady) {
+    initGsapGlobal();
+  } else {
+    addEventListener("DOMContentLoaded", (event) => initGsapGlobal());
+  }
+}
+</script>
+  <script>
+//About Section
+// Image Card Loop
+const items = document.querySelectorAll(".project-card");
+const offset = 30;
+gsap.set(items, {
+  zIndex: (index) => items.length - index,
+  opacity: 0,
+  scale: 0.8
+});
+// ------------------ Diagonal Loop (Desktop, unchanged) ------------------ //
+function diagonalLoop(items) {
+  let totalItems = items.length;
+  let currentItem = 0;
+  function updatePositions() {
+    for (let i = 0; i < totalItems; i++) {
+      let itemIndex = (currentItem + i) % totalItems;
+      let item = items[itemIndex];
+      gsap.to(item, {
+        x: offset * i,
+        y: -offset * i * 1.5, // ⬆️ diagonal upward
+        zIndex: totalItems - i,
+        scale: 1,
+        opacity: 1,
+        duration: 0.6
+      });
+    }
+  }
+  function moveToNext() {
+    currentItem = (currentItem + 1) % totalItems;
+    updatePositions();
+  }
+  updatePositions();
+  setInterval(moveToNext, 2000);
+}
+// ------------------ Straight Loop (Mobile, fixed to stack upward) ------------------ //
+function straightLoop(items) {
+  let totalItems = items.length;
+  let currentItem = 0;
+  function updatePositions() {
+    for (let i = 0; i < totalItems; i++) {
+      let itemIndex = (currentItem + i) % totalItems;
+      let item = items[itemIndex];
+      gsap.to(item, {
+        x: 0,
+        y: -offset * i * 1.5, // ⬆️ straight upward (TOP visible first)
+        zIndex: totalItems - i,
+        scale: 1,
+        opacity: 1,
+        duration: 0.6
+      });
+    }
+  }
+  function moveToNext() {
+    currentItem = (currentItem + 1) % totalItems;
+    updatePositions();
+  }
+  updatePositions();
+  setInterval(moveToNext, 2000);
+}
+// ------------------ Responsive Setup ------------------ //
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.create({
+    trigger: ".about-scroll-trigger",
+    start: "top 80%",
+    once: true,
+    onEnter: () => {
+      if (window.innerWidth <= 428) {
+        straightLoop(items); // 📱 Mobile → stacked upward (top peeks out)
+      } else {
+        diagonalLoop(items); // 💻 Desktop → original diagonal upward
+      }
+    }
+  });
+});
+// END Image Card Loop
+//WHY US SECTION
+// Counter
+gsap.registerPlugin(ScrollTrigger);
+document.querySelectorAll(".why-us-card").forEach(card => {
+  let counter = card.querySelector(".number");
+  if (counter) {
+    let finalValue = parseInt(counter.textContent, 10);
+    // Set initial value to 0
+    counter.textContent = "0";
+    ScrollTrigger.create({
+      trigger: card,
+      start: "top 80%", // when each card reaches 80% down the viewport
+      once: true,
+      onEnter: () => {
+        gsap.fromTo(counter, 
+          { innerText: 0 }, 
+          {
+            innerText: finalValue,
+            duration: 2,
+            ease: "power1.out",
+            snap: { innerText: 1 }
+          }
+        );
+      }
+    });
+  }
+});
+// END Counter
+</script>
+</body>
+</html>

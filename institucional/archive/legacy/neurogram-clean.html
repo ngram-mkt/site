@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neurogram™ - Ecosystem for Brain Intelligence</title>
+  <meta name="description" content="Discover Neurogram: advanced neurofisiología platform with seamless EEG integration, standardization, and clinical efficiency.">
+
+  <!-- FONTS: Upload NeueHaasDisplayThin.ttf and NeueHaasDisplayMedium.ttf to Webflow -->
+  <style>
+    /* Font declarations will be handled via Webflow custom fonts upload */
+  </style>
+<script type='text/javascript' src='https://api.netlify.com/gKL8frtYFDOdOlTcNIXiCkEDvWsc0tcESlvtrvYAh7pMlBuJsPClQyr598-Jm6Lx_F8P48jQgrTHDrg5rnSb0f5qvc7-yljiPhHHEvC5Fl-iRFhXuqW0nCSQQNYgAhlW6mYd1rXeoTFhHlLrBly2anpnGgR2SdyENnU-ptImNH9T15VTO6LcxbsMqsNqg_4AMOqyakGZ2kjvryjmCB1NcbZzwPFYfmoenTtDy_2Ji6eUvUGAKQPwCJ3_z9K4S9IJbMDBHGuTpda8-_EedJCSt8hsL8xQo0MtlvcYmkTZJwkSQQtOfAbriX4rwWjwyUDSCc1NMhpZ4HX6UgBNvylxig6TuPzfLvmbqgukvVllLCaKuX3CXmHjNAAJBhW6iT9_9LZicSS0w4twH-W_SrbSOTWscg-2nYDfk52XF8Bry1xRBlR9_Xe-qf8_IhmW5IplSrol3ihp3_LfrGFRt8q65FnWX9yEuXawNL43hDW6DmshDJGAFE1OmaDM_aeL_01e5ydmbouV8_GJxhc5zc7S9andttYPlxBVKtvHtRwNI-8HM4aeWCQRrMJc'></script></head>
+<body>
+
+<!-- ===== STICKY WRAPPER & HERO ===== -->
+<div class="sticky-wrap">
+  <div class="sticky-hero">
+
+    <!-- HEADER / NAVIGATION -->
+    <section class="header-section">
+      <nav role="banner" class="navbar-content">
+        <div class="navbar-wrapper">
+          <!-- Logo -->
+          <a href="#home" class="navbar-logo-dark">
+            <img src="images/neurogram-logo.svg" alt="Neurogram" class="logo-image">
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <div class="navbar-link-wrap">
+            <a href="#about" class="nav-link">
+              <div class="small-text">About</div>
+            </a>
+          </div>
+          <div class="navbar-link-wrap">
+            <a href="#work" class="nav-link">
+              <div class="small-text">Solutions</div>
+            </a>
+          </div>
+          <div class="navbar-link-wrap">
+            <a href="#cta" class="nav-link">
+              <div class="small-text">Contact</div>
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="navbar-button-wrap visible-mobile">
+            <button class="navbar-menu-button">
+              <img width="23" alt="Menu" src="images/three-horizontal-lines-icon.svg" class="navbar-icon">
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav class="navbar-menu-mobile" style="display: none;">
+          <div class="menu-wrap">
+            <div class="menu-flex">
+              <button class="navbar-menu-button-close">
+                <img width="23" alt="Close" src="images/close-line-icon.svg" class="navbar-icon white">
+              </button>
+              <div class="navbar-menu-wrapper">
+                <a href="#about" class="header-link-wrap navbar">About</a>
+                <a href="#work" class="header-link-wrap navbar">Solutions</a>
+                <a href="#cta" class="header-link-wrap navbar">Contact</a>
+              </div>
+            </div>
+            <img src="images/img8.webp" alt="Menu background" class="menu-image">
+          </div>
+        </nav>
+      </nav>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="main-section hero">
+      <div class="main-container">
+        <div class="hero-wrap">
+          <div class="hero-moving-title">
+            <div class="hero-title-wrap">
+              <img src="images/neurogram-type.svg" alt="Neurogram" class="hero-type-image">
+            </div>
+          </div>
+          <div class="hero-desc-wrap">
+            <div class="small-text">Ecosystem for brain intelligence</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ===== ABOUT SECTION ===== -->
+<div class="about-sticky-wrap">
+  <section id="about" class="main-section about">
+    <div class="main-container full-width">
+      <div class="about-inner-sticky">
+        <div class="about-wrap">
+          <div class="about-inner-wrap">
+            <div class="about-content">
+
+              <!-- Line 1: "we" + carousel + "are unlocking" -->
+              <div class="about-line">
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">we</div>
+                </div>
+                <div class="about-image-resize">
+                  <div class="about-image-wrap">
+                    <img src="images/1.webp" alt="About image 1" class="about-image var-1">
+                    <img src="images/2.webp" alt="About image 2" class="about-image var-2">
+                    <img src="images/5.jpg" alt="About image 3" class="about-image var-3">
+                  </div>
+                </div>
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">are unlocking</div>
+                </div>
+              </div>
+
+              <!-- Line 2: "the brain" + lottie arrow + "for a smarter" -->
+              <div class="about-line">
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">the brain</div>
+                </div>
+                <div class="lottie-wrap">
+                  <div class="lottie-arrow" data-lottie-src="documents/Bouncy-arrow.json"></div>
+                </div>
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">for a <span class="font-weight-500">smarter</span></div>
+                </div>
+              </div>
+
+              <!-- Line 3: "and accessible" + button -->
+              <div class="about-line">
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">and <span class="font-weight-500">accessible</span></div>
+                </div>
+                <div class="hero-button-wrap">
+                  <a href="#contact" class="button-slide">
+                    <div class="button-slide-in-wrap">
+                      <div class="button-bg-wrap">
+                        <div class="button-bg" style="transform: skew(-14deg)"></div>
+                      </div>
+                      <div class="button-slide-text">Contact us</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Line 4: "neurophysiology" -->
+              <div class="about-line">
+                <div class="big-text-wrap">
+                  <div class="big-text about-text">neurophysiology</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Secondary CTA Link -->
+            <a href="#contact" class="line-link">
+              <div class="line-link-wrap">
+                <div class="line-link-text small">Contact us</div>
+                <div class="link-line"></div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Background triggers for scroll animation -->
+          <div class="about-second-bg" data-scroll-trigger="about-color-change"></div>
+          <div class="about-scroll-trigger"></div>
+          <div class="project-window"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== WHY US SECTION ===== -->
+<section id="why-us" class="main-section why-us">
+  <div class="main-container">
+    <div class="why-us-wrap">
+      <div class="why-us-sticky">
+
+        <!-- Title -->
+        <div class="why-us-title">
+          <div class="why-title">
+            <div class="big-text">The context</div>
+            <div class="big-text" style="opacity: 0;"></div>
+          </div>
+        </div>
+
+        <!-- Content Cards -->
+        <div class="why-us-content">
+
+          <!-- Card 1: 43% Statistic -->
+          <div class="why-us-card second">
+            <div class="achievement-card">
+              <div class="percentage-bar">
+                <div class="progress-wrap">
+                  <div class="progress-bar-dynamic" data-counter="43"></div>
+                  <div class="progress-bar-static"></div>
+                </div>
+                <div class="counter" data-counter-value="43">
+                  <div class="counter-text">43%</div>
+                </div>
+              </div>
+              <div class="counter-value">
+                <div class="counter-big-text var-2"><span class="number">43</span><span class="suffix">%</span></div>
+              </div>
+              <div class="why-us-desc">
+                <p>World's population lives with a neurological condition</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 50+ Years -->
+          <div class="why-us-card third">
+            <div class="achievement-card">
+              <div class="counter-value">
+                <div class="counter-big-text var-2"><span class="number">50</span><span class="suffix">+ years</span></div>
+              </div>
+              <div class="why-us-desc">
+                <p>The EEG has been the brain's primary diagnostic tool since the 1970s — still the same.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Text -->
+          <div class="why-us-card first">
+            <div class="medium-text">Radiology and cardiology evolved through universal standards, digital workflows, and AI-powered diagnostics.</div>
+          </div>
+
+          <!-- Card 4: Text -->
+          <div class="why-us-card fourth">
+            <div class="medium-text">Neurophysiology did not.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay & Question (hidden by default, revealed on scroll) -->
+  <div id="why-us-overlay" class="why-us-overlay" style="opacity: 0;"></div>
+  <div id="why-us-question" class="why-us-question" style="opacity: 0;">
+    <div class="question-content">
+      <div class="medium-big-text">Why is neurophysiology still technologically <span class="font-weight-500">behind?</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE SECTION (3 Feature Cards) ===== -->
+<section id="service-section" class="main-section service-section">
+  <div id="service-content" class="service-content">
+
+    <!-- Section Intro -->
+    <div class="project-desc-wrap">
+      <div class="intro-text-big">
+        <div class="medium-big-text">A <span class="font-weight-500">fragmented ecosystem</span> that was never built to work together.</div>
+      </div>
+      <div class="intro-text-small">
+        <div class="small-text">Every clinic, device and workflow<br>operating in isolation.</div>
+      </div>
+    </div>
+
+    <!-- Feature Cards Grid -->
+    <div class="project-card-wrapper">
+      <div class="project-card-inner">
+
+        <!-- Card 1: Interoperability -->
+        <div class="project-card var-1">
+          <div class="project-card-title">
+            <div class="card-headline">Inter<br>operability</div>
+            <div class="card-description">Devices, software, and workflows do not communicate with each other.</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Standardization -->
+        <div class="project-card var-2">
+          <div class="project-card-title">
+            <div class="card-headline">Standard<br>ization</div>
+            <div class="card-description">EEG data is generated, stored, and reported in inconsistent formats across systems.</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Non-EEG-native -->
+        <div class="project-card var-3">
+          <div class="project-card-title">
+            <div class="card-headline">Non-<br>EEG-native</div>
+            <div class="card-description">Exams are reviewed on tools not built for neurophysiological analysis.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK INIT SECTION (Pinned) ===== -->
+<section id="work-init" class="main-section initial-work">
+  <div class="main-container full-width">
+    <div class="initial-work-wrap">
+      <div class="initial-work-title-wrap">
+        <div style="display:flex; flex-direction:column; gap:2.5vw;">
+          <div class="big-text white-text">Great papers<br>are <span class="font-weight-500">not enough.</span></div>
+          <div class="small-text white-text-70">The science exists. We built the ecosystem to turn it into care.</div>
+        </div>
+        <div class="small-text white-text-70">Our solutions</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WORK / SOLUTIONS SECTION ===== -->
+<section id="work" class="main-section work">
+  <div class="main-container full-width">
+    <div class="project-sticky">
+
+      <!-- Solution 1: EEG Platform -->
+      <div class="project-work-wrap">
+        <div class="project-work-image-wrap">
+          <a href="#" class="work-image-link">
+            <img src="images/solution-eeg.png" alt="EEG Platform" class="project-work-image">
+          </a>
+          <div class="project-work-text">
+            <div class="medium-text">EEG Platform</div>
+            <div class="extra-small-text">From signal to report, in one place.<br>The EEG platform built for clinical efficiency</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Solution 2: Neurovital -->
+      <div class="project-work-wrap last">
+        <div class="project-work-image-wrap-2">
+          <a href="#" class="work-image-link">
+            <img src="images/solution-neurovital.jpg" alt="Neurovital" class="project-work-image-2">
+          </a>
+          <div class="project-work-text">
+            <div class="medium-text">
+              Neurovital
+              <span class="badge-soon">Soon</span>
+            </div>
+            <div class="extra-small-text">Real-time neurological monitoring for intensive care.<br>Because 92% of neurological events in the ICU are silent.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== MEDIA SECTION (Horizontal Scroll) ===== -->
+<section id="media" class="main-section media-section">
+  <div class="media-inner">
+
+    <!-- Left Column: Title -->
+    <div class="media-left">
+      <div class="big-text">Media</div>
+    </div>
+
+    <!-- Right Column: Horizontal Scroll Track -->
+    <div class="media-right">
+      <div class="media-track">
+
+        <!-- Media Card 1 -->
+        <div class="media-card">
+          <div class="media-card-header">
+            <div class="media-card-year">2025</div>
+            <div class="media-card-logo"></div>
+          </div>
+          <div class="media-card-headline">Neurological monitoring technology reaches new precision levels in ICU care settings</div>
+        </div>
+
+        <!-- Media Card 2 -->
+        <div class="media-card">
+          <div class="media-card-header">
+            <div class="media-card-year">2024</div>
+            <div class="media-card-logo"></div>
+          </div>
+          <div class="media-card-headline">EEG platforms are transforming how hospitals approach brain health monitoring</div>
+        </div>
+
+        <!-- Media Card 3 -->
+        <div class="media-card">
+          <div class="media-card-header">
+            <div class="media-card-year">2024</div>
+            <div class="media-card-logo"></div>
+          </div>
+          <div class="media-card-headline">The future of neurophysiology: how digital platforms are closing the clinical gap</div>
+        </div>
+
+        <!-- Media Card 4 -->
+        <div class="media-card">
+          <div class="media-card-header">
+            <div class="media-card-year">2023</div>
+            <div class="media-card-logo"></div>
+          </div>
+          <div class="media-card-headline">Clinical neurophysiology enters a new era with integrated monitoring solutions</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM SECTION ===== -->
+<section id="team" class="main-section team-section">
+  <div class="team-inner">
+
+    <!-- Team Header -->
+    <div class="team-header">
+      <div class="team-title">The team</div>
+    </div>
+
+    <!-- Team Cards Grid -->
+    <div class="team-cards">
+
+      <!-- Team Member 1 -->
+      <div class="team-card">
+        <img src="images/p1.webp" alt="Team member" class="team-card-photo">
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 1</div>
+          <div class="team-card-role">CEO & Co-founder</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 2 -->
+      <div class="team-card">
+        <img src="images/p2.webp" alt="Team member" class="team-card-photo">
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 2</div>
+          <div class="team-card-role">CMO</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="team-card">
+        <img src="images/p3.webp" alt="Team member" class="team-card-photo">
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 3</div>
+          <div class="team-card-role">CTO</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="team-card">
+        <img src="images/p4.webp" alt="Team member" class="team-card-photo">
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 4</div>
+          <div class="team-card-role">CFO</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 5 -->
+      <div class="team-card">
+        <div class="team-card-placeholder"></div>
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 5</div>
+          <div class="team-card-role">Chief Medical Officer</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 6 -->
+      <div class="team-card">
+        <div class="team-card-placeholder"></div>
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 6</div>
+          <div class="team-card-role">Head of Product</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+      <!-- Team Member 7 -->
+      <div class="team-card">
+        <div class="team-card-placeholder"></div>
+        <div class="team-card-info">
+          <div class="team-card-name">Team Member 7</div>
+          <div class="team-card-role">Head of Partnerships</div>
+          <div class="team-card-bio">Short bio here.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER / CTA SECTION ===== -->
+<section id="cta" class="main-section footer-section">
+  <div class="footer-inner">
+    <div class="footer-content">
+      <div class="footer-text">
+        <h2 class="footer-headline">Ready to transform neurophysiology?</h2>
+        <p class="footer-description">Join the ecosystem building the future of brain intelligence.</p>
+      </div>
+      <a href="#contact" class="footer-cta-button">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-wrapper">
+    <div class="footer-column">
+      <div class="footer-logo">Neurogram™</div>
+      <div class="footer-tagline">Ecosystem for brain intelligence</div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-title">Product</div>
+      <a href="#" class="footer-link">EEG Platform</a>
+      <a href="#" class="footer-link">Neurovital</a>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-title">Company</div>
+      <a href="#" class="footer-link">About</a>
+      <a href="#" class="footer-link">Contact</a>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-title">Legal</div>
+      <a href="#" class="footer-link">Privacy</a>
+      <a href="#" class="footer-link">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Neurogram™. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
