@@ -77,6 +77,8 @@ exports.handler = async function (event) {
     });
 
     if (!contactResponse.ok) {
+      const errBody = await contactResponse.text();
+      console.error('[hubspot] contact creation failed (' + contactResponse.status + '): ' + errBody);
       return redirect('?error=1');
     }
 
@@ -84,7 +86,7 @@ exports.handler = async function (event) {
     const contactId = contact.id;
 
     if (contactId) {
-      await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
+      const noteResponse = await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + token,
@@ -113,10 +115,16 @@ exports.handler = async function (event) {
           ],
         }),
       });
+
+      if (!noteResponse.ok) {
+        const errBody = await noteResponse.text();
+        console.error('[hubspot] note creation failed (' + noteResponse.status + '): ' + errBody);
+      }
     }
 
     return redirect('?submitted=1');
   } catch (err) {
+    console.error('[hubspot] unexpected error: ' + (err && err.stack ? err.stack : err));
     return redirect('?error=1');
   }
 };
