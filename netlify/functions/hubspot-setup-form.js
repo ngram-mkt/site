@@ -4,8 +4,12 @@
 // Visit /.netlify/functions/hubspot-setup-form once, then it prints the
 // portalId + formGuid to wire into hubspot.js.
 
-const DEFAULT_VALIDATION = { blockedEmailDomains: [], useDefaultBlockList: false };
-const PHONE_VALIDATION = { blockedEmailDomains: [], useDefaultBlockList: false, minAllowedDigits: 8, maxAllowedDigits: 15 };
+const DEFAULT_VALIDATION = {
+  blockedEmailDomains: [],
+  useDefaultBlockList: false,
+  minAllowedDigits: 0,
+  maxAllowedDigits: 40,
+};
 
 function field(name, label, fieldType, required, validation) {
   return {
@@ -21,7 +25,7 @@ function field(name, label, fieldType, required, validation) {
 
 const FIELD_GROUPS = [
   { groupType: 'default_group', richTextType: 'text', fields: [field('firstname', 'Nome', 'single_line_text', true)] },
-  { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true, PHONE_VALIDATION)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true, { blockedEmailDomains: [], useDefaultBlockList: false, minAllowedDigits: 8, maxAllowedDigits: 15 })] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('email', 'E-mail', 'email', true)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('eeg_type', 'Tipo de EEG', 'multiple_checkboxes', false)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('monthly_reports', 'Quantidade de laudos mensal', 'number', false)] },
