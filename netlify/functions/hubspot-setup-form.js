@@ -5,8 +5,9 @@
 // portalId + formGuid to wire into hubspot.js.
 
 const DEFAULT_VALIDATION = { blockedEmailDomains: [], useDefaultBlockList: false };
+const PHONE_VALIDATION = { blockedEmailDomains: [], useDefaultBlockList: false, minAllowedDigits: 8, maxAllowedDigits: 15 };
 
-function field(name, label, fieldType, required) {
+function field(name, label, fieldType, required, validation) {
   return {
     objectTypeId: '0-1',
     name: name,
@@ -14,13 +15,13 @@ function field(name, label, fieldType, required) {
     fieldType: fieldType,
     required: !!required,
     hidden: false,
-    validation: DEFAULT_VALIDATION,
+    validation: validation || DEFAULT_VALIDATION,
   };
 }
 
 const FIELD_GROUPS = [
   { groupType: 'default_group', richTextType: 'text', fields: [field('firstname', 'Nome', 'single_line_text', true)] },
-  { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true, PHONE_VALIDATION)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('email', 'E-mail', 'email', true)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('eeg_type', 'Tipo de EEG', 'multiple_checkboxes', false)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('monthly_reports', 'Quantidade de laudos mensal', 'number', false)] },
