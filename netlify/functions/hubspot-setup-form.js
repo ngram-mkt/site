@@ -22,9 +22,9 @@ const FIELD_GROUPS = [
   { groupType: 'default_group', richTextType: 'text', fields: [field('firstname', 'Nome', 'single_line_text', true)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('email', 'E-mail', 'email', true)] },
-  { groupType: 'default_group', richTextType: 'text', fields: [field('eeg_type', 'Tipo de EEG', 'checkbox', false)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('eeg_type', 'Tipo de EEG', 'multiple_checkboxes', false)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('monthly_reports', 'Quantidade de laudos mensal', 'number', false)] },
-  { groupType: 'default_group', richTextType: 'text', fields: [field('equipment', 'Aparelhos que trabalha', 'checkbox', false)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('equipment', 'Aparelhos que trabalha', 'multiple_checkboxes', false)] },
   { groupType: 'default_group', richTextType: 'text', fields: [field('phrase', 'Palavra/frase', 'single_line_text', false)] },
 ];
 
