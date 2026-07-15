@@ -54,9 +54,18 @@ exports.handler = async function (event) {
   const eegType = eegTypeList.join(', ');
   const equipment = equipmentList.join(', ');
 
-  if (!name || !phone || !email || !monthlyReports || !phrase) {
+  if (!name || !phone || !email) {
     return redirect('?error=1');
   }
+
+  // Only the top 3 fields are required now — omit the rest instead of
+  // sending empty strings (monthly_reports is a number property in
+  // HubSpot and rejects "").
+  const contactProperties = { firstname: name, phone: phone, email: email };
+  if (eegTypeList.length) contactProperties.eeg_type = eegTypeList.join(';');
+  if (monthlyReports) contactProperties.monthly_reports = monthlyReports;
+  if (equipmentList.length) contactProperties.equipment = equipmentList.join(';');
+  if (phrase) contactProperties.phrase = phrase;
 
   try {
     // Upsert (create-or-update) by email so resubmissions from the same
@@ -72,15 +81,7 @@ exports.handler = async function (event) {
           {
             idProperty: 'email',
             id: email,
-            properties: {
-              firstname: name,
-              phone: phone,
-              email: email,
-              eeg_type: eegTypeList.join(';'),
-              monthly_reports: monthlyReports,
-              equipment: equipmentList.join(';'),
-              phrase: phrase,
-            },
+            properties: contactProperties,
           },
         ],
       }),
@@ -141,19 +142,21 @@ exports.handler = async function (event) {
         'https://api.hsforms.com/submissions/v3/integration/submit/' +
         HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID;
 
+      const formFields = [
+        { name: 'firstname', value: name },
+        { name: 'phone', value: phone },
+        { name: 'email', value: email },
+      ];
+      if (eegTypeList.length) formFields.push({ name: 'eeg_type', value: eegTypeList.join(';') });
+      if (monthlyReports) formFields.push({ name: 'monthly_reports', value: monthlyReports });
+      if (equipmentList.length) formFields.push({ name: 'equipment', value: equipmentList.join(';') });
+      if (phrase) formFields.push({ name: 'phrase', value: phrase });
+
       const formResponse = await fetch(formSubmitUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          fields: [
-            { name: 'firstname', value: name },
-            { name: 'phone', value: phone },
-            { name: 'email', value: email },
-            { name: 'eeg_type', value: eegTypeList.join(';') },
-            { name: 'monthly_reports', value: monthlyReports },
-            { name: 'equipment', value: equipmentList.join(';') },
-            { name: 'phrase', value: phrase },
-          ],
+          fields: formFields,
           context: {
             pageUri: 'https://neurogram.com/LBE-2026',
             pageName: 'LBE 2026 - Cadastro Neurogram',
