@@ -68,24 +68,6 @@ exports.handler = async function () {
         name: 'LBE 2026 - Cadastro Neurogram',
         formType: 'hubspot',
         fieldGroups: FIELD_GROUPS,
-        configuration: {
-          language: 'pt',
-          cloneable: true,
-          editable: true,
-          archivable: true,
-          recaptchaEnabled: false,
-          notifyContactOwner: false,
-          notifyRecipients: [],
-          createNewContactForNewEmail: true,
-          prefillEnabled: true,
-          allowLinkToResetKnownValues: false,
-          postSubmitAction: { type: 'thank_you', value: 'Formulário enviado com sucesso' },
-        },
-        displayOptions: {
-          renderRawHtml: false,
-          theme: 'default_style',
-          submitButtonText: 'Enviar',
-        },
       }),
     });
 
