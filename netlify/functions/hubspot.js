@@ -57,33 +57,41 @@ exports.handler = async function (event) {
   }
 
   try {
-    const contactResponse = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+    // Upsert (create-or-update) by email so resubmissions from the same
+    // person/test don't fail with a 409 "contact already exists" conflict.
+    const contactResponse = await fetch('https://api.hubapi.com/crm/v3/objects/contacts/batch/upsert', {
       method: 'POST',
       headers: {
         Authorization: 'Bearer ' + token,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        properties: {
-          firstname: name,
-          phone: phone,
-          email: email,
-          eeg_type: eegTypeList.join(';'),
-          monthly_reports: monthlyReports,
-          equipment: equipmentList.join(';'),
-          phrase: phrase,
-        },
+        inputs: [
+          {
+            idProperty: 'email',
+            id: email,
+            properties: {
+              firstname: name,
+              phone: phone,
+              email: email,
+              eeg_type: eegTypeList.join(';'),
+              monthly_reports: monthlyReports,
+              equipment: equipmentList.join(';'),
+              phrase: phrase,
+            },
+          },
+        ],
       }),
     });
 
     if (!contactResponse.ok) {
       const errBody = await contactResponse.text();
-      console.error('[hubspot] contact creation failed (' + contactResponse.status + '): ' + errBody);
+      console.error('[hubspot] contact upsert failed (' + contactResponse.status + '): ' + errBody);
       return redirect('?error=1');
     }
 
-    const contact = await contactResponse.json();
-    const contactId = contact.id;
+    const upsertResult = await contactResponse.json();
+    const contactId = upsertResult.results && upsertResult.results[0] && upsertResult.results[0].id;
 
     if (contactId) {
       const noteResponse = await fetch('https://api.hubapi.com/crm/v3/objects/notes', {
