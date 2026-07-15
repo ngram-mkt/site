@@ -67,7 +67,9 @@ exports.handler = async function () {
       body: JSON.stringify({
         name: 'LBE 2026 - Cadastro Neurogram',
         formType: 'hubspot',
+        createdAt: Date.now(),
         fieldGroups: FIELD_GROUPS,
+        configuration: {},
       }),
     });
 
