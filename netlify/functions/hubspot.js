@@ -1,4 +1,6 @@
 const REDIRECT_BASE = '/LBE-2026/';
+const HUBSPOT_PORTAL_ID = '45616811';
+const HUBSPOT_FORM_GUID = '2b3a9abf-3f1b-46a0-9a21-bcad62f127f7';
 
 function toList(values) {
   return values
@@ -128,6 +130,43 @@ exports.handler = async function (event) {
         const errBody = await noteResponse.text();
         console.error('[hubspot] note creation failed (' + noteResponse.status + '): ' + errBody);
       }
+    }
+
+    // Also submit to the HubSpot form itself so this registers as a real
+    // "form submission" event (timeline + form analytics + workflow
+    // triggers), on top of the direct contact/note calls above. The contact
+    // already exists by this point, so this just attaches the submission.
+    try {
+      const formSubmitUrl =
+        'https://api.hsforms.com/submissions/v3/integration/submit/' +
+        HUBSPOT_PORTAL_ID + '/' + HUBSPOT_FORM_GUID;
+
+      const formResponse = await fetch(formSubmitUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fields: [
+            { name: 'firstname', value: name },
+            { name: 'phone', value: phone },
+            { name: 'email', value: email },
+            { name: 'eeg_type', value: eegTypeList.join(';') },
+            { name: 'monthly_reports', value: monthlyReports },
+            { name: 'equipment', value: equipmentList.join(';') },
+            { name: 'phrase', value: phrase },
+          ],
+          context: {
+            pageUri: 'https://neurogram.com/LBE-2026',
+            pageName: 'LBE 2026 - Cadastro Neurogram',
+          },
+        }),
+      });
+
+      if (!formResponse.ok) {
+        const errBody = await formResponse.text();
+        console.error('[hubspot] form submission failed (' + formResponse.status + '): ' + errBody);
+      }
+    } catch (err) {
+      console.error('[hubspot] form submission unexpected error: ' + (err && err.stack ? err.stack : err));
     }
 
     return redirect('?submitted=1');
