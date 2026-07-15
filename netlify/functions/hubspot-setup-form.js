@@ -79,7 +79,7 @@ exports.handler = async function () {
           createNewContactForNewEmail: true,
           prefillEnabled: true,
           allowLinkToResetKnownValues: false,
-          postSubmitAction: { type: 'thank_you' },
+          postSubmitAction: { type: 'thank_you', value: 'Formulário enviado com sucesso' },
         },
         displayOptions: {
           renderRawHtml: false,
