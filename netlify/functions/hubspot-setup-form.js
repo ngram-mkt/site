@@ -4,42 +4,28 @@
 // Visit /.netlify/functions/hubspot-setup-form once, then it prints the
 // portalId + formGuid to wire into hubspot.js.
 
+const DEFAULT_VALIDATION = { blockedEmailDomains: [], useDefaultBlockList: false };
+
+function field(name, label, fieldType, required) {
+  return {
+    objectTypeId: '0-1',
+    name: name,
+    label: label,
+    fieldType: fieldType,
+    required: !!required,
+    hidden: false,
+    validation: DEFAULT_VALIDATION,
+  };
+}
+
 const FIELD_GROUPS = [
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'firstname', label: 'Nome', fieldType: 'single_line_text', required: true },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'phone', label: 'Telefone', fieldType: 'phone', required: true },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'email', label: 'E-mail', fieldType: 'email', required: true },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'eeg_type', label: 'Tipo de EEG', fieldType: 'checkbox', required: false },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'monthly_reports', label: 'Quantidade de laudos mensal', fieldType: 'number', required: false },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'equipment', label: 'Aparelhos que trabalha', fieldType: 'checkbox', required: false },
-    ],
-  },
-  {
-    fields: [
-      { objectTypeId: '0-1', name: 'phrase', label: 'Palavra/frase', fieldType: 'single_line_text', required: false },
-    ],
-  },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('firstname', 'Nome', 'single_line_text', true)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('phone', 'Telefone', 'phone', true)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('email', 'E-mail', 'email', true)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('eeg_type', 'Tipo de EEG', 'checkbox', false)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('monthly_reports', 'Quantidade de laudos mensal', 'number', false)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('equipment', 'Aparelhos que trabalha', 'checkbox', false)] },
+  { groupType: 'default_group', richTextType: 'text', fields: [field('phrase', 'Palavra/frase', 'single_line_text', false)] },
 ];
 
 exports.handler = async function () {
@@ -79,10 +65,21 @@ exports.handler = async function () {
         fieldGroups: FIELD_GROUPS,
         configuration: {
           language: 'pt',
-          createNewContactForNewEmail: true,
+          cloneable: true,
           editable: true,
           archivable: true,
           recaptchaEnabled: false,
+          notifyContactOwner: false,
+          notifyRecipients: [],
+          createNewContactForNewEmail: true,
+          prefillEnabled: true,
+          allowLinkToResetKnownValues: false,
+          postSubmitAction: { type: 'thank_you' },
+        },
+        displayOptions: {
+          renderRawHtml: false,
+          theme: 'default_style',
+          submitButtonText: 'Enviar',
         },
       }),
     });
