@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full antialiased">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neurogram™ | LBE 2026</title>
+  <meta name="description" content="Do papel à inteligência. Cadastre-se e conheça a plataforma Neurogram no Congresso Brasileiro de Epilepsia.">
+  <link rel="canonical" href="https://neurogram.com/LBE-2026">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Neurogram">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://neurogram.com/LBE-2026">
+  <meta property="og:title" content="Neurogram™ | LBE 2026">
+  <meta property="og:description" content="Do papel à inteligência. Cadastre-se e conheça a plataforma Neurogram no Congresso Brasileiro de Epilepsia.">
+  <meta property="og:image" content="https://neurogram.com/LBE-2026/neurogram-figma-page.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neurogram™ | LBE 2026">
+  <meta name="twitter:description" content="Do papel à inteligência. Cadastre-se e conheça a plataforma Neurogram no Congresso Brasileiro de Epilepsia.">
+  <meta name="twitter:image" content="https://neurogram.com/LBE-2026/neurogram-figma-page.png">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --background: #000000;
+      --foreground: #ffffff;
+    }
+
+    html, body {
+      height: 100%;
+      background: var(--background);
+      color: var(--foreground);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    * { box-sizing: border-box; }
+
+    a { color: inherit; text-decoration: none; }
+
+    #lead-toggle:checked ~ .lead-card {
+      min-height: 560px !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.12),
+        0 32px 70px rgba(0, 0, 0, 0.42) !important;
+    }
+
+    @media (min-width: 640px) {
+      #lead-toggle:checked ~ .lead-card { min-height: 620px !important; }
+    }
+
+    @media (min-width: 768px) {
+      #lead-toggle:checked ~ .lead-card { min-height: 660px !important; }
+    }
+
+    @media (max-width: 639px) {
+      #lead-toggle:checked ~ .lead-card {
+        position: fixed !important;
+        inset: 0 !important;
+        z-index: 50 !important;
+        width: 100vw !important;
+        max-width: none !important;
+        min-height: 100dvh !important;
+        border-width: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        backdrop-filter: blur(14px) !important;
+      }
+
+      #lead-toggle:checked ~ .lead-card .lead-form {
+        overflow: hidden !important;
+        padding: 16px !important;
+      }
+
+      #lead-toggle:checked ~ .lead-card .lead-form > div {
+        height: 100% !important;
+        max-width: none !important;
+        gap: 14px !important;
+      }
+
+      #lead-toggle:checked ~ .lead-card .lead-form form {
+        gap: 10px !important;
+      }
+    }
+
+    #lead-toggle:checked ~ .lead-card .lead-hero {
+      pointer-events: none !important;
+      opacity: 0 !important;
+      transform: translateY(12px) !important;
+    }
+
+    #lead-toggle:checked ~ .lead-card .lead-form {
+      pointer-events: auto !important;
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+  </style>
+</head>
+<body class="min-h-full bg-black text-white">
+  <main class="relative min-h-screen overflow-hidden bg-black text-white">
+    <div id="toast-submitted" hidden class="fixed left-1/2 top-4 z-[60] -translate-x-1/2 rounded-full border border-white/15 bg-black/80 px-4 py-2 text-sm text-white shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-md">
+      Formulário enviado com sucesso
+    </div>
+
+    <div id="toast-error" hidden class="fixed left-1/2 top-4 z-[60] -translate-x-1/2 rounded-full border border-red-400/30 bg-red-500/15 px-4 py-2 text-sm text-red-100 shadow-[0_12px_30px_rgba(0,0,0,0.35)] backdrop-blur-md">
+      Não foi possível enviar agora
+    </div>
+
+    <div aria-hidden="true" class="absolute inset-0">
+      <img alt="" class="h-full w-full object-cover object-center" src="neurogram-figma-page.png">
+      <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+    <section class="relative flex min-h-screen items-center justify-center px-4 py-6 sm:px-6 lg:px-8">
+      <input id="lead-toggle" type="checkbox" class="sr-only">
+
+      <div class="lead-card relative w-full max-w-[1120px] overflow-hidden rounded-[20px] border-2 border-white/90 bg-black/40 shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_24px_60px_rgba(0,0,0,0.32)] backdrop-blur-[10px] transition-[min-height,background-color,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] min-h-[380px] sm:min-h-[420px] md:min-h-[520px]">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_45%)]"></div>
+
+        <div class="relative h-full min-h-[inherit]">
+          <div class="lead-hero absolute inset-0 flex items-center justify-center px-5 py-4 transition-all duration-500 ease-out sm:px-10 sm:py-12 md:px-[100px] md:py-[80px] opacity-100 translate-y-0">
+            <div class="flex w-full max-w-[860px] flex-col items-start gap-5 p-0 sm:gap-8 md:gap-[54px] md:p-[10px]">
+              <h1
+                class="max-w-[11ch] text-white tracking-normal text-[clamp(3.25rem,14vw,4.7rem)] leading-[0.87] sm:max-w-[11ch] sm:text-[clamp(3rem,9vw,150px)] sm:leading-[0.92]"
+                style="font-family: 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', sans-serif;"
+              >
+                <span class="block whitespace-nowrap font-extralight">Do papel à</span>
+                <span class="block whitespace-nowrap"><span class="font-semibold">inteligência</span></span>
+              </h1>
+
+              <div class="flex flex-wrap items-center gap-3 pt-2 sm:gap-6 sm:pt-0 md:gap-[30px]">
+                <div class="flex size-[48px] items-center justify-center overflow-hidden rounded-[10px] bg-[#273b16] sm:size-[62px] md:size-[69px]">
+                  <img alt="Neurogram" class="h-full w-full object-contain" src="neurogram-figma-logo.svg">
+                </div>
+
+                <label
+                  for="lead-toggle"
+                  class="inline-flex min-w-[104px] cursor-pointer items-center justify-center rounded-[10px] bg-[#5c8d32] px-4 py-3 text-[0.98rem] font-medium text-white shadow-[0_8px_20px_rgba(92,141,50,0.25)] transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] sm:px-7 sm:py-4 sm:text-[1.125rem] md:h-[69px] md:px-[30px] md:text-[24px] md:leading-none"
+                >
+                  Cadastrar
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="lead-form absolute inset-0 flex items-start justify-start overflow-y-auto px-4 py-4 transition-all duration-500 ease-out sm:items-center sm:justify-center sm:px-8 sm:py-8 md:px-10 md:py-10 max-sm:overflow-hidden opacity-0 translate-y-4 pointer-events-none">
+            <div class="flex h-full w-full max-w-[920px] flex-col gap-3 rounded-[16px] p-0 sm:max-w-[860px] sm:gap-6 md:gap-8 md:p-[10px] max-sm:max-w-none max-sm:gap-3 max-sm:justify-start">
+              <div class="flex justify-end">
+                <label for="lead-toggle" class="cursor-pointer rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80 transition hover:bg-white/10 hover:text-white max-sm:px-3 max-sm:py-1.5 max-sm:text-[0.72rem]">
+                  Voltar
+                </label>
+              </div>
+
+              <form class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4" action="/.netlify/functions/hubspot" method="post">
+                <label class="flex w-full min-w-0 flex-col gap-1.5">
+                  <span class="text-sm text-white/70 max-sm:text-[0.7rem]">Nome</span>
+                  <input required name="name" type="text" placeholder="Seu nome"
+                    class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
+                </label>
+
+                <label class="flex w-full min-w-0 flex-col gap-1.5">
+                  <span class="text-sm text-white/70 max-sm:text-[0.7rem]">Telefone</span>
+                  <input required name="phone" type="tel" placeholder="(11) 99999-9999"
+                    class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
+                </label>
+
+                <label class="flex w-full min-w-0 flex-col gap-1.5">
+                  <span class="text-sm text-white/70 max-sm:text-[0.7rem]">E-mail</span>
+                  <input required name="email" type="email" placeholder="voce@empresa.com"
+                    class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
+                </label>
+
+                <fieldset class="flex w-full min-w-0 flex-col gap-1.5 sm:col-span-2">
+                  <legend class="text-sm text-white/70 max-sm:text-[0.7rem]">Tipo de EEG que trabalha</legend>
+                  <div class="grid grid-cols-3 gap-2 sm:flex sm:flex-wrap">
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="eegType" value="VEEG" class="sr-only">VEEG
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="eegType" value="UTI" class="sr-only">UTI
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="eegType" value="Rotina" class="sr-only">Rotina
+                    </label>
+                  </div>
+                </fieldset>
+
+                <label class="flex w-full min-w-0 flex-col gap-1.5">
+                  <span class="text-sm text-white/70 max-sm:text-[0.7rem]">Quantidade de laudos mensal</span>
+                  <input required name="monthlyReports" type="number" min="0" placeholder="Ex: 120"
+                    class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
+                </label>
+
+                <fieldset class="flex w-full min-w-0 flex-col gap-1.5 sm:col-span-2">
+                  <legend class="text-sm text-white/70 max-sm:text-[0.7rem]">Aparelhos que trabalha</legend>
+                  <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="equipment" value="EMSA" class="sr-only">EMSA
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="equipment" value="Neurosoft" class="sr-only">Neurosoft
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="equipment" value="Neurovirtual" class="sr-only">Neurovirtual
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="equipment" value="Neurotec" class="sr-only">Neurotec
+                    </label>
+                    <label class="inline-flex w-full cursor-pointer items-center justify-center rounded-full border border-white/12 bg-black/25 px-3 py-2 text-sm text-white/85 transition hover:border-white/25 hover:bg-white/8 has-[:checked]:border-[#5c8d32] has-[:checked]:bg-[#5c8d32]/20 has-[:checked]:text-white max-sm:min-h-10 max-sm:px-2 max-sm:py-2 max-sm:text-[0.72rem]">
+                      <input type="checkbox" name="equipment" value="Nihon" class="sr-only">Nihon
+                    </label>
+                  </div>
+                </fieldset>
+
+                <label class="flex w-full min-w-0 flex-col gap-1.5 sm:col-span-2">
+                  <span class="text-sm text-white/70 max-sm:text-[0.7rem]">Palavra/frase</span>
+                  <input required name="phrase" type="text" placeholder="Escreva aqui"
+                    class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
+                </label>
+
+                <div class="sticky bottom-0 flex flex-col gap-2 bg-gradient-to-t from-black/75 via-black/45 to-transparent pt-3 pb-2 sm:col-span-2 sm:static sm:flex-row sm:items-center sm:gap-3 sm:bg-none sm:p-0 max-sm:pt-1 max-sm:pb-0">
+                  <button type="submit" class="inline-flex h-11 min-w-[140px] items-center justify-center rounded-[10px] bg-[#5c8d32] px-5 text-base font-medium text-white shadow-[0_8px_20px_rgba(92,141,50,0.25)] transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] sm:w-fit max-sm:h-10 max-sm:min-w-0 max-sm:w-full max-sm:px-4 max-sm:text-sm">
+                    Enviar
+                  </button>
+                  <p class="text-sm text-white/55 max-sm:hidden sm:pl-1">Leva menos de 1 minuto.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (params.get('submitted')) {
+        document.getElementById('toast-submitted').hidden = false;
+      }
+      if (params.get('error')) {
+        document.getElementById('toast-error').hidden = false;
+      }
+      if (params.get('submitted') || params.get('error')) {
+        var url = new URL(window.location.href);
+        url.searchParams.delete('submitted');
+        url.searchParams.delete('error');
+        window.history.replaceState({}, '', url.pathname + url.search);
+      }
+    })();
+  </script>
+</body>
+</html>

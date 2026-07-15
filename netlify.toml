@@ -1,0 +1,3 @@
+[build]
+  publish = "institucional"
+  functions = "netlify/functions"
