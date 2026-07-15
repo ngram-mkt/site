@@ -19,6 +19,7 @@ function buildNoteBody(data) {
     'Quantidade de laudos mensal: ' + (data.monthlyReports || '-'),
     'Aparelhos: ' + (data.equipment || '-'),
     'Palavra/frase: ' + (data.phrase || '-'),
+    'Aceite dos termos (LGPD/uso de imagem): Sim, em ' + new Date().toISOString(),
   ].join('\n');
 }
 
@@ -49,12 +50,13 @@ exports.handler = async function (event) {
   const email = (params.get('email') || '').trim();
   const monthlyReports = (params.get('monthlyReports') || '').trim();
   const phrase = (params.get('phrase') || '').trim();
+  const termsAccepted = (params.get('termsAccepted') || '').trim();
   const eegTypeList = toList(params.getAll('eegType'));
   const equipmentList = toList(params.getAll('equipment'));
   const eegType = eegTypeList.join(', ');
   const equipment = equipmentList.join(', ');
 
-  if (!name || !phone || !email) {
+  if (!name || !phone || !email || !termsAccepted) {
     return redirect('?error=1');
   }
 

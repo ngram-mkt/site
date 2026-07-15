@@ -233,6 +233,24 @@
                     class="h-9 rounded-[12px] border border-white/12 bg-black/30 px-4 text-white outline-none transition placeholder:text-white/30 focus:border-[#5c8d32] focus:bg-black/45 sm:h-12 max-sm:h-9 max-sm:px-3 max-sm:text-[0.85rem]">
                 </label>
 
+                <div class="flex flex-col gap-2 sm:col-span-2">
+                  <div class="flex items-start gap-2">
+                    <input required type="checkbox" id="acceptTerms" name="termsAccepted" value="yes"
+                      class="mt-0.5 h-4 w-4 shrink-0 cursor-pointer rounded border-white/30 bg-black/30 text-[#5c8d32] focus:ring-[#5c8d32] focus:ring-offset-0">
+                    <label for="acceptTerms" class="cursor-pointer text-xs leading-snug text-white/70">
+                      Ao marcar esta opção, declaro que li e concordo com os presentes
+                      <span id="termsWord" class="underline decoration-white/40 underline-offset-2 hover:decoration-white">termos</span>.
+                    </label>
+                  </div>
+                  <div id="termsFullText" hidden
+                    class="max-h-36 overflow-y-auto rounded-[10px] border border-white/12 bg-black/30 p-3 text-[0.68rem] leading-relaxed text-white/60">
+                    <p class="mb-2">Autorizo a Neurogram a tratar os dados pessoais fornecidos neste formulário para fins de participação na ação promocional realizada durante o Congresso Brasileiro de Neurofisiologia Clínica, bem como para envio de comunicações institucionais, conteúdos, novidades e informações sobre seus produtos e serviços, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD).</p>
+                    <p class="mb-2">Declaro estar ciente de que o estande da Neurogram poderá ser fotografado e filmado durante o evento. Autorizo, de forma gratuita, a captação e o uso da minha imagem, voz e demais registros audiovisuais realizados nesse contexto para divulgação institucional da Neurogram, em quaisquer meios de comunicação, físicos ou digitais, incluindo redes sociais, website, materiais promocionais e apresentações, sem limitação territorial ou prazo determinado, sem que isso gere qualquer direito a remuneração ou indenização.</p>
+                    <p class="mb-2">Estou ciente de que minha participação na ação promocional está condicionada ao preenchimento deste formulário e à aceitação destes termos.</p>
+                    <p>Poderei solicitar, a qualquer momento, informações sobre o tratamento dos meus dados pessoais ou exercer os direitos previstos na LGPD por meio dos canais oficiais da Neurogram.</p>
+                  </div>
+                </div>
+
                 <div class="flex flex-col gap-2 pt-3 pb-2 mb-4 sm:col-span-2 sm:flex-row sm:items-center sm:gap-3 sm:pt-0 sm:pb-0 max-sm:pt-1 max-sm:pb-0">
                   <button type="submit" class="inline-flex h-11 min-w-[140px] items-center justify-center rounded-[10px] bg-[#5c8d32] px-5 text-base font-medium text-white shadow-[0_8px_20px_rgba(92,141,50,0.25)] transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98] sm:w-fit max-sm:h-10 max-sm:min-w-0 max-sm:w-full max-sm:px-4 max-sm:text-sm">
                     Enviar
@@ -262,6 +280,17 @@
         url.searchParams.delete('error');
         window.history.replaceState({}, '', url.pathname + url.search);
       }
+    })();
+
+    (function () {
+      var word = document.getElementById('termsWord');
+      var full = document.getElementById('termsFullText');
+      if (!word || !full) return;
+      word.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        full.hidden = !full.hidden;
+      });
     })();
   </script>
 </body>
