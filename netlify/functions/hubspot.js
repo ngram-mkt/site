@@ -47,8 +47,10 @@ exports.handler = async function (event) {
   const email = (params.get('email') || '').trim();
   const monthlyReports = (params.get('monthlyReports') || '').trim();
   const phrase = (params.get('phrase') || '').trim();
-  const eegType = toList(params.getAll('eegType')).join(', ');
-  const equipment = toList(params.getAll('equipment')).join(', ');
+  const eegTypeList = toList(params.getAll('eegType'));
+  const equipmentList = toList(params.getAll('equipment'));
+  const eegType = eegTypeList.join(', ');
+  const equipment = equipmentList.join(', ');
 
   if (!name || !phone || !email || !monthlyReports || !phrase) {
     return redirect('?error=1');
@@ -62,7 +64,15 @@ exports.handler = async function (event) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        properties: { firstname: name, phone: phone, email: email },
+        properties: {
+          firstname: name,
+          phone: phone,
+          email: email,
+          eeg_type: eegTypeList.join(';'),
+          monthly_reports: monthlyReports,
+          equipment: equipmentList.join(';'),
+          phrase: phrase,
+        },
       }),
     });
 
