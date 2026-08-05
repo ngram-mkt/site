@@ -2812,16 +2812,6 @@ document.addEventListener('DOMContentLoaded', function() {
       en: '<span style="display: inline-block; white-space: nowrap;">But great papers</span><br><span style="display: inline-block; white-space: nowrap; font-weight:100;">are</span> <span style="display: inline-block; white-space: nowrap; font-weight:500;">not enough</span>',
       pt: '<span style="display: inline-block; white-space: nowrap;">Mas bons artigos</span><br><span style="display: inline-block; white-space: nowrap; font-weight:100;">não são</span> <span style="display: inline-block; white-space: nowrap; font-weight:500;">suficientes.</span>'
     },
-    {
-      selector: '#section-break-mobile > div > div:nth-child(1)',
-      en: '<span style="font-weight: 100;">But great papers</span><br><span style="font-weight: 100;">are</span> <span style="font-weight: 500;">not enough</span>',
-      pt: '<span style="display:block;white-space:nowrap;font-weight:100;">Mas bons artigos</span><span style="display:block;white-space:nowrap;font-weight:100;">não são <span style="font-weight:500;">suficientes.</span></span>'
-    },
-    {
-      selector: '#section-break-mobile > div > div:nth-child(2)',
-      en: 'The science exists. And we built<br>the ecosystem to turn it into care.',
-      pt: 'A ciência existe. E a gente construiu um<br>ecossistema para transformá-la em cuidado.'
-    }
   ];
 
   var attrMap = [
@@ -2916,21 +2906,6 @@ document.addEventListener('DOMContentLoaded', function() {
       subtitle.innerHTML = 'Clínicas, equipamentos e fluxos de<br>trabalho operando isoladamente.';
     } else {
       subtitle.innerHTML = 'Every clinic, device and workflow<br>operating in isolation.';
-    }
-  }
-
-  function applyBreakSectionMobileTitlePt(lang) {
-    var title = document.querySelector('#section-break-mobile > div > div:nth-child(1)');
-    if (!title) return;
-    var isMobile = window.innerWidth <= 767;
-    if (!title.dataset.baseFontSize) title.dataset.baseFontSize = title.style.fontSize || '11vw';
-    if (!title.dataset.baseLineHeight) title.dataset.baseLineHeight = title.style.lineHeight || '1.02';
-    if (isMobile && lang === 'pt') {
-      title.style.setProperty('font-size', '10.4vw', 'important');
-      title.style.setProperty('line-height', '1.03', 'important');
-    } else {
-      title.style.setProperty('font-size', title.dataset.baseFontSize, 'important');
-      title.style.setProperty('line-height', title.dataset.baseLineHeight, 'important');
     }
   }
 
@@ -3095,7 +3070,6 @@ document.addEventListener('DOMContentLoaded', function() {
     applyMissionMobileFont(normalizedLang);
     applyQuestionMobileFont(normalizedLang);
     applyWhySubtitleMobilePt(normalizedLang);
-    applyBreakSectionMobileTitlePt(normalizedLang);
     applySolutionsMobilePtTitles(normalizedLang);
     applySolutionsMobilePtHeaderLayout(normalizedLang);
     applyMissionDesktopPtLayout(normalizedLang);
