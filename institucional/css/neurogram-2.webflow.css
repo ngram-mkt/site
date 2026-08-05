@@ -5381,6 +5381,52 @@ figure {
   }
 }
 
+/* Tablet gap fix (768-991px): the mobile reflow above stops at 767px, so
+   #section-context fell back to the desktop 50%-width card column, which
+   is far too narrow on a tablet screen, plus the desktop scroll-driven
+   dark overlay stayed visible (it's only hidden in the 767px block). */
+@media (min-width: 768px) and (max-width: 991px) {
+  #section-context .why-us-sticky {
+    position: static !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #section-context .why-us-title {
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  #section-context .why-us-content {
+    width: 100% !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    flex-direction: column !important;
+  }
+
+  #section-context .why-us-card {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  #section-context-overlay {
+    display: none !important;
+  }
+}
+
 /* Mobile: Solutions section typography (max-width: 767px) */
 @media (max-width: 767px) {
   .medium-text.eeg-title,
