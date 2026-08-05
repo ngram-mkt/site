@@ -4683,7 +4683,7 @@ figure {
   }
 
   #section-solutions .project-sticky {
-    position: static !important;
+    position: relative !important;
     height: auto !important;
     min-height: 0 !important;
     flex: none !important;
