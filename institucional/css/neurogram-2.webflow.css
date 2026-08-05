@@ -3148,10 +3148,10 @@ figure {
   }
 
   .big-text {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     font-family: 'NeueHaasDisplay', sans-serif;
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 500 !important;
     line-height: 2rem;
   }
 
@@ -4684,10 +4684,10 @@ figure {
 
   #section-solutions .project-sticky {
     position: static !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    flex: 0 0 100vh !important;
-    margin-bottom: 0 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    margin-bottom: 2rem !important;
     display: flex !important;
     flex-direction: column !important;
     overflow: hidden !important;
@@ -4740,6 +4740,12 @@ figure {
     overflow: visible !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
+  }
+
+  #section-media .media-inner {
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
   }
 
   #section-media .media-left {
@@ -5329,11 +5335,6 @@ figure {
   }
 
   /* Opacity and filter subtleties */
-  .big-text {
-    font-weight: 500 !important;
-    letter-spacing: -0.01em !important;
-  }
-
   span[style*="font-weight:500"] {
     font-weight: 500 !important;
   }

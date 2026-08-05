@@ -303,8 +303,7 @@
       #section-question-mobile,
       #section-why,
       #section-break-mobile,
-      #section-team,
-      #section-solutions .project-sticky {
+      #section-team {
         height: calc(var(--app-vh, 1vh) * 100) !important;
         min-height: calc(var(--app-vh, 1vh) * 100) !important;
       }
@@ -531,15 +530,13 @@
 
       #section-solutions .project-sticky {
         height: auto !important;
-        min-height: 100svh !important;
+        min-height: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         margin: 0 !important;
         padding: 0 !important;
         overflow: visible !important;
-        scroll-snap-align: start !important;
-        scroll-snap-stop: always !important;
       }
 
       /* Prevent jumping from first solution directly to Media */
