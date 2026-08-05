@@ -4630,7 +4630,8 @@ figure {
   /* ===== SECTION BREAK MOBILE ===== */
   #section-break-mobile {
     display: flex !important;
-    height: 100vh !important;
+    height: auto !important;
+    min-height: 100vh !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
     padding: 3rem 1.5rem 2rem !important;
