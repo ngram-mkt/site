@@ -1283,7 +1283,7 @@ figure {
   grid-column-gap: 25vw;
   grid-row-gap: 25vw;
   flex-flow: column;
-  height: 600vh;
+  height: 100vh;
   display: flex;
 }
 
@@ -4903,9 +4903,8 @@ figure {
     }
   }
 
-  /* Mission section animation */
+  /* Mission section: sem animação, estático */
   #section-mission-mobile > div {
-    animation: fadeInUp 0.8s ease-out forwards;
   }
 
   /* Context section title animation */
@@ -5438,9 +5437,9 @@ figure {
 }
 
 #section-break .w-layout-blockcontainer {
-  height: 100% !important;
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
+  align-items: center !important;
 }
 
 /* Media Section */

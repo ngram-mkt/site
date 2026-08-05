@@ -946,6 +946,8 @@
         margin: 0 !important;
         gap: 0.55rem !important;
         flex-shrink: 0 !important;
+        position: static !important;
+        inset: auto !important;
       }
 
       #section-why .intro-text-big .medium-big-text {
@@ -1056,6 +1058,25 @@
 
     /* WHY compact layout for wider mobile/tablet viewports */
     @media (max-width: 991px) {
+      #section-why {
+        height: auto !important;
+        min-height: 100svh !important;
+        overflow: visible !important;
+      }
+
+      #section-why #Service {
+        position: static !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+
+      #section-why .project-desc-wrap {
+        position: static !important;
+        inset: auto !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
       #section-why .why-cards-indicators {
         display: none !important;
       }
@@ -1175,18 +1196,14 @@
                       <div class="navbar-link">About</div>
                     </div>
                   </a>
-                  <a href="#section-solutions" data-w-id="46886c73-715f-60b5-8817-d67c53d4e876" class="header-link-wrap navbar w-inline-block">
+                  <a href="https://neurogram.com/plataforma" data-w-id="46886c73-715f-60b5-8817-d67c53d4e876" class="header-link-wrap navbar w-inline-block">
                     <div class="link-text">
-                      <div class="navbar-link">Solutions</div>
+                      <div class="navbar-link" style="letter-spacing:0.03em;">EEG platform</div>
                     </div>
                   </a>
-                  <a href="#section-cta" data-w-id="46886c73-715f-60b5-8817-d67c53d4e87e" class="header-link-wrap navbar w-inline-block">
-                    <div class="link-text">
-                      <div class="navbar-link">Contact</div>
-                    </div>
-                  </a>
+
                 </div>
-              </div><img sizes="(max-width: 1200px) 100vw, 1200px" srcset="images/img8-p-500.webp 500w, images/img8-p-800.webp 800w, images/img8-p-1080.webp 1080w, images/img8.webp 1200w" alt="A window on white wall." src="images/img8.webp" loading="lazy" class="menu-image">
+              </div>
             </div>
           </nav>
         </div>
@@ -1201,8 +1218,7 @@
               <img src="images/logo-neurogram.svg" alt="Neurogram" style="height:28px;width:auto;display:block;">
               <!-- Links e botão na direita - desktop -->
               <div style="display:flex;gap:2rem;align-items:center;" class="nav-desktop">
-                <a href="#section-solutions" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:0.95rem;">Solutions</a>
-                <a href="mailto:contact@neurogram.com" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:0.95rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);padding:0.5rem 1.2rem;border-radius:1.5rem;">Contact</a>
+                <a href="https://neurogram.com/plataforma" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:0.95rem;letter-spacing:0.03em;">EEG platform</a>
                 <button id="lang-toggle-desktop" type="button" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:0.85rem;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);padding:0.45rem 0.8rem;border-radius:1.5rem;letter-spacing:0.02em;cursor:pointer;">PT</button>
               </div>
               <!-- Burger icon - mobile -->
@@ -1217,8 +1233,7 @@
             </div>
             <!-- Mobile menu links -->
             <div id="mobile-menu" style="display:none;flex-direction:column;gap:1.1rem;align-items:center;justify-content:center;padding:2rem 1.5rem 2rem 1.5rem;overflow:hidden;text-align:center;">
-              <a href="#section-solutions" onclick="const m=document.getElementById('mobile-menu'); const nb=document.getElementById('nav-bar'); m.classList.remove('expanded'); nb.style.maxHeight='70px'; document.getElementById('burger-icon').style.opacity='1'; document.getElementById('burger-icon').style.transform='translate(-50%,-50%) rotate(0deg)'; document.getElementById('close-icon').style.opacity='0'; document.getElementById('close-icon').style.transform='translate(-50%,-50%) rotate(-90deg)'; setTimeout(()=>{m.style.display='none';}, 350);" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:2rem;font-weight:500;transition:all 0.2s ease;cursor:pointer;">Solutions</a>
-              <a href="mailto:contact@neurogram.com" onclick="const m=document.getElementById('mobile-menu'); const nb=document.getElementById('nav-bar'); m.classList.remove('expanded'); nb.style.maxHeight='70px'; document.getElementById('burger-icon').style.opacity='1'; document.getElementById('burger-icon').style.transform='translate(-50%,-50%) rotate(0deg)'; document.getElementById('close-icon').style.opacity='0'; document.getElementById('close-icon').style.transform='translate(-50%,-50%) rotate(-90deg)'; setTimeout(()=>{m.style.display='none';}, 350);" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:2rem;font-weight:500;transition:all 0.2s ease;cursor:pointer;">Contact</a>
+              <a href="https://neurogram.com/plataforma" onclick="const m=document.getElementById('mobile-menu'); const nb=document.getElementById('nav-bar'); m.classList.remove('expanded'); nb.style.maxHeight='70px'; document.getElementById('burger-icon').style.opacity='1'; document.getElementById('burger-icon').style.transform='translate(-50%,-50%) rotate(0deg)'; document.getElementById('close-icon').style.opacity='0'; document.getElementById('close-icon').style.transform='translate(-50%,-50%) rotate(-90deg)'; setTimeout(()=>{m.style.display='none';}, 350);" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:2rem;font-weight:500;transition:all 0.2s ease;cursor:pointer;letter-spacing:0.03em;">EEG platform</a>
               <button id="lang-toggle-mobile" type="button" style="color:#fff;text-decoration:none;font-family:'NeueHaasDisplay',sans-serif;font-size:1.25rem;font-weight:500;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);padding:0.45rem 1.2rem;border-radius:1.5rem;transition:all 0.2s ease;cursor:pointer;">PT</button>
             </div>
             <style>
@@ -1344,50 +1359,28 @@
               <div class="about-content">
                 <div class="about-line">
                   <div class="big-text-wrap">
-                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb71676984" class="big-text about" style="font-size:7vw !important;line-height:1.1;">we </div>
-                  </div>
-                  <div class="about-image-resize">
-                    <div class="about-image-wrap">
-                      <div class="about-image-container var-1">
-                        <div class="about-image">
-                          <img alt="Triangle icon." src="images/triangle.svg" loading="lazy">
-                        </div>
-                      </div>
-                      <div class="about-image-container var-2">
-                        <div class="about-image">
-                          <img loading="lazy" src="images/star.svg" alt="Star icon.">
-                        </div>
-                      </div>
-                      <div class="about-image-container var-3">
-                        <div class="about-image">
-                          <img loading="lazy" src="images/security.svg" alt="Security icon.">
-                        </div>
-                      </div>
-                    </div>
+                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb71676984" class="big-text about" style="font-size:7vw !important;line-height:1.1;color:#1F2116;">we</div>
                   </div>
                   <div class="big-text-wrap">
-                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb71676987" class="big-text about" style="font-size:7vw !important;line-height:1.1;">are unlocking</div>
+                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb71676987" class="big-text about" style="font-size:7vw !important;line-height:1.1;color:#1F2116;">are unlocking</div>
                   </div>
                 </div>
                 <div class="about-line">
                   <div class="big-text-wrap">
-                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb7167698b" class="big-text about">the brain</div>
+                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb7167698b" class="big-text about" style="color:#1F2116;">the brain</div>
                   </div>
                   <div class="big-text-wrap">
-                    <div data-w-id="0cde54da-fe86-720f-a42f-be6f7288ad4e" class="big-text about">for a</div>
-                  </div>
-                  <div class="lottie-wrap">
-                    <div class="lottie-arrow" data-w-id="086f6cd3-9da5-1ab3-3131-a2c5707dd8f8" data-animation-type="lottie" data-src="documents/Bouncy-arrow.json" data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="0" data-duration="1" style="filter: hue-rotate(90deg) saturate(0.6) brightness(0.4);"></div>
+                    <div data-w-id="0cde54da-fe86-720f-a42f-be6f7288ad4e" class="big-text about" style="color:#1F2116;">for a</div>
                   </div>
                 </div>
                 <div class="about-line">
                   <div class="big-text-wrap">
-                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb7167698f" class="big-text about"><span style="font-weight:500;">smarter</span> and <span style="font-weight:500;">accessible</span></div>
+                    <div data-w-id="d2cbc0df-e302-3a69-273f-6afb7167698f" class="big-text about" style="color:#1F2116;"><span style="font-weight:500;color:#67922F;">smarter</span> and <span style="font-weight:500;color:#314719;">accessible</span></div>
                   </div>
                 </div>
                 <div class="about-line">
                   <div class="big-text-wrap">
-                    <div data-w-id="438582fe-9cc4-0cf1-7453-01cca42ef2fa" class="big-text about">neurophysiology</div>
+                    <div data-w-id="438582fe-9cc4-0cf1-7453-01cca42ef2fa" class="big-text about" style="color:#1F2116;">neurophysiology</div>
                   </div>
                 </div>
               </div>
@@ -1425,47 +1418,9 @@
         missionMobile.style.display = 'flex';
       }
 
-      // Desativar animações no mobile
-      if (window.innerWidth <= 767) return;
-
-      if (window.gsap && window.ScrollTrigger) {
-        gsap.registerPlugin(ScrollTrigger);
-        var aboutSection = document.getElementById('section-mission');
-        var aboutTexts = document.querySelectorAll('.big-text.about');
-        var aboutSecondBg = document.querySelector('.about-second-bg');
-
-        console.log('About Section:', aboutSection);
-        console.log('About Second BG:', aboutSecondBg);
-        console.log('About Texts:', aboutTexts.length);
-
-        var aboutST = {
-          trigger: aboutSecondBg,
-          start: 'top bottom',
-          end: 'top top',
-          scrub: true,
-          invalidateOnRefresh: true,
-          onUpdate: (self) => console.log('ScrollTrigger Progress:', self.progress)
-        };
-
-        gsap.fromTo(aboutSection,
-          { backgroundColor: '#F3F2F0' },
-          { backgroundColor: '#52643D', ease: 'none', scrollTrigger: aboutST }
-        );
-
-        gsap.fromTo(aboutTexts,
-          { color: '#1F2116' },
-          { color: '#ffffff', ease: 'none', scrollTrigger: aboutST }
-        );
-
-        // Animar esconderimento dos elementos (deixar apenas a última frase)
-        var aboutImages = document.querySelectorAll('.about-image-container');
-
-        gsap.fromTo(aboutImages,
-          { opacity: 1 },
-          { opacity: 0, ease: 'none', scrollTrigger: aboutST }
-        );
-
-      }
+      // Seção "about" agora é estática em todos os breakpoints: sem scroll-trigger, sem animação/delay de cor.
+      var aboutSection = document.getElementById('section-mission');
+      if (aboutSection) aboutSection.style.backgroundColor = '#F3F2F0';
     });
   </script>
   <section id="section-context" data-w-id="83d5e1e3-fbd3-9a00-65bf-3d958e0811eb" class="main-section why-us" data-mobile-bg="#F3F2F0">
@@ -1693,7 +1648,7 @@
           scrollTrigger: {
             trigger: whyUs,
             start: 'bottom bottom',
-            end: '+=70%',
+            end: '+=45%',
             pin: true,
             pinSpacing: true,
             scrub: 0.8,
@@ -1835,7 +1790,7 @@
       ScrollTrigger.create({
         trigger: section,
         start: 'top top',
-      end: '+=2400vh',
+      end: '+=280%',
         pin: true,
         pinSpacing: true,
         invalidateOnRefresh: true,
@@ -1875,55 +1830,101 @@
       }
     });
   </script>
-    <section id="section-break" class="main-section initial-work" style="background-image:url('images/great-papers-bg.png');background-size:cover;background-position:center;">
-      <div class="w-layout-blockcontainer main-container w-container" style="height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;">
-        <div class="initial-work-wrap" style="height:auto;justify-content:flex-start;align-items:flex-start;">
-          <div class="initial-work-title-wrap">
-            <div style="display:flex;flex-direction:column;gap:2.5vw;">
-              <div class="big-text" style="color:#fff;font-size:clamp(1.25rem,6vw,5rem) !important;line-height:1.1;"><span style="display: inline-block; white-space: nowrap;">But great papers</span><br><span style="display: inline-block; white-space: nowrap; font-weight:100;">are</span> <span style="display: inline-block; white-space: nowrap; font-weight:500;">not enough</span></div>
-              <div class="small-text" style="color:rgba(255,255,255,0.7);font-size:20px !important;line-height:1.1;">The science exists. And we built the ecosystem to turn it into care.</div>
-              <div style="display:flex;align-items:center;gap:1.5vw;margin-top:2vw;animation:bounce 2s infinite;">
-                <div class="small-text" style="white-space:nowrap;color:rgba(255,255,255,0.8);font-size:15px !important;">Explore our solutions</div>
-                <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 12L16 20L24 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+    <section id="section-break" class="main-section" data-mobile-bg="#1F2116" style="background-color:#1F2116;min-height:100vh;display:flex;align-items:center;padding:6vw 6%;box-sizing:border-box;">
+      <div class="w-layout-blockcontainer main-container full w-container" style="display:flex;flex-direction:row;gap:5vw;align-items:center;width:100%;">
+        <div style="flex:1.3 1 0%;min-width:0;">
+          <div class="extra-small-text value-eyebrow" style="color:#83A35A;font-size:15px !important;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.2vw;">What we do</div>
+          <div class="medium-text value-heading" style="color:#fff;font-weight:500;font-size:clamp(2.4rem,5.4vw,4.4rem) !important;line-height:1.08;margin-bottom:3vw;">Where we create value</div>
+          <div style="display:flex;flex-direction:column;">
+            <div style="display:flex;gap:2vw;padding:2.4vw 0;border-top:1px solid rgba(255,255,255,0.14);">
+              <div style="color:rgba(255,255,255,0.28);font-weight:300;font-size:2.4vw;flex:none;width:3.6vw;line-height:1;">01</div>
+              <div style="padding-top:0.3vw;flex:1;">
+                <div class="value-item-1-title" style="color:#fff;font-weight:500;font-size:1.7vw;margin-bottom:0.7vw;">Hospitals &amp; Clinics</div>
+                <div class="value-item-1-desc" style="color:rgba(255,255,255,0.6);font-size:1.05vw;line-height:1.55;">Neurogram connects the entire EEG journey in a single platform — cutting manual work, accelerating diagnostics, and extending efficiency from routine exams to ICU monitoring.</div>
               </div>
+            </div>
+            <div style="display:flex;gap:2vw;padding:2.4vw 0;border-top:1px solid rgba(255,255,255,0.14);">
+              <div style="color:rgba(255,255,255,0.28);font-weight:300;font-size:2.4vw;flex:none;width:3.6vw;line-height:1;">02</div>
+              <div style="padding-top:0.3vw;flex:1;">
+                <div class="value-item-2-title" style="color:#fff;font-weight:500;font-size:1.7vw;margin-bottom:0.7vw;">Research</div>
+                <div class="value-item-2-desc" style="color:rgba(255,255,255,0.6);font-size:1.05vw;line-height:1.55;">We support universities and research centers in organizing and analyzing EEG data — accelerating studies, biomarker discovery, and the development of new technologies.</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:2vw;padding:2.4vw 0;border-top:1px solid rgba(255,255,255,0.14);border-bottom:1px solid rgba(255,255,255,0.14);">
+              <div style="color:rgba(255,255,255,0.28);font-weight:300;font-size:2.4vw;flex:none;width:3.6vw;line-height:1;">03</div>
+              <div style="padding-top:0.3vw;flex:1;">
+                <div class="value-item-3-title" style="color:#fff;font-weight:500;font-size:1.7vw;margin-bottom:0.7vw;">Pharma &amp; Precision Medicine</div>
+                <div class="value-item-3-desc" style="color:rgba(255,255,255,0.6);font-size:1.05vw;line-height:1.55;">We help pharmaceutical companies incorporate EEG data into clinical research, standardizing exams and generating evidence on how patients respond to treatment.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1 1 0%;min-width:0;background:rgba(255,255,255,0.04);border-radius:1.4vw;padding:3.2vw 2.8vw;">
+          <div class="value-stats-label" style="color:rgba(255,255,255,0.5);font-size:0.85vw;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:2.4vw;">Impact</div>
+          <div style="display:flex;flex-direction:column;">
+            <div style="padding-bottom:2.4vw;">
+              <div style="width:2vw;height:3px;background:#83A35A;margin-bottom:1.1vw;"></div>
+              <div class="counter-big-text value-stat-1-num" style="color:#fff;font-weight:500;font-size:clamp(2.6rem,5.8vw,4.4rem) !important;line-height:1;">60,000+</div>
+              <div class="value-stat-1-label" style="color:rgba(255,255,255,0.6);font-size:1.05vw;margin-top:0.7vw;">hours of EEG processed</div>
+            </div>
+            <div style="padding:2.4vw 0;border-top:1px solid rgba(255,255,255,0.1);">
+              <div style="width:2vw;height:3px;background:#83A35A;margin-bottom:1.1vw;"></div>
+              <div class="counter-big-text value-stat-2-num" style="color:#fff;font-weight:500;font-size:clamp(2.6rem,5.8vw,4.4rem) !important;line-height:1;">4</div>
+              <div class="value-stat-2-label" style="color:rgba(255,255,255,0.6);font-size:1.05vw;margin-top:0.7vw;">research papers &amp; publications</div>
+            </div>
+            <div style="padding-top:2.4vw;border-top:1px solid rgba(255,255,255,0.1);">
+              <div style="width:2vw;height:3px;background:#83A35A;margin-bottom:1.1vw;"></div>
+              <div class="counter-big-text value-stat-3-num" style="color:#fff;font-weight:500;font-size:clamp(2.6rem,5.8vw,4.4rem) !important;line-height:1;">12%</div>
+              <div class="value-stat-3-label" style="color:rgba(255,255,255,0.6);font-size:1.05vw;margin-top:0.7vw;">of Brazilian neurophysiologists already use Neurogram</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mobile version of "But great papers" section -->
-    <section id="section-break-mobile" data-mobile-bg="#8a8f82" style="height: 100vh; background-image: url('images/papers-mobile.png'); background-size: cover; background-position: center; display: flex; justify-content: flex-end; align-items: flex-start; position: relative; z-index: 1; padding: 3rem 0 2rem; box-sizing: border-box;">
-      <div style="position: relative; z-index: 1; color: var(--white); font-family: 'NeueHaasDisplay', sans-serif;">
-        <div style="font-family: 'NeueHaasDisplay', sans-serif; font-size: 11vw; line-height: 1.02; font-weight: 100; margin-bottom: 1.5rem;"><span style="font-weight: 100;">But great papers</span><br><span style="font-weight: 100;">are</span> <span style="font-weight: 500;">not enough</span></div>
-        <div style="font-family: 'NeueHaasDisplay', sans-serif; color: rgba(255, 255, 255, 0.7); font-size: 20px; line-height: 1.1; margin-bottom: 2rem;">The science exists. And we built<br>the ecosystem to turn it into care.</div>
-        <div style="display: flex; align-items: center; gap: 1.5vw; animation: bounce 2s infinite;">
-          <div style="font-family: 'NeueHaasDisplay', sans-serif; color: rgba(255, 255, 255, 0.8); white-space: nowrap; font-size: 15px;">Explore our solutions</div>
-          <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 12L16 20L24 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <!-- Mobile version of "Where we create value" section -->
+    <section id="section-break-mobile" data-mobile-bg="#1F2116" style="background-color:#1F2116;display:flex;flex-direction:column;position:relative;z-index:1;padding:3rem 1.5rem 3.5rem;box-sizing:border-box;">
+      <div class="medium-text" style="color:#fff;font-weight:500;font-size:9vw;line-height:1.1;margin-bottom:2rem;">Where we create value</div>
+      <div style="display:flex;flex-direction:column;margin-bottom:2.5rem;">
+        <div style="display:flex;gap:1rem;padding:1.4rem 0;border-top:1px solid rgba(255,255,255,0.15);">
+          <div style="color:#83A35A;font-weight:500;font-size:16px;flex:none;">01</div>
+          <div>
+            <div style="color:#fff;font-weight:500;font-size:20px;margin-bottom:0.5rem;">Hospitals &amp; Clinics</div>
+            <div style="color:rgba(255,255,255,0.65);font-size:15px;line-height:1.45;">Neurogram connects the entire EEG journey in a single platform — cutting manual work, accelerating diagnostics, and extending efficiency from routine exams to ICU monitoring.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;padding:1.4rem 0;border-top:1px solid rgba(255,255,255,0.15);">
+          <div style="color:#83A35A;font-weight:500;font-size:16px;flex:none;">02</div>
+          <div>
+            <div style="color:#fff;font-weight:500;font-size:20px;margin-bottom:0.5rem;">Research</div>
+            <div style="color:rgba(255,255,255,0.65);font-size:15px;line-height:1.45;">We support universities and research centers in organizing and analyzing EEG data — accelerating studies, biomarker discovery, and the development of new technologies.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:1rem;padding:1.4rem 0;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);">
+          <div style="color:#83A35A;font-weight:500;font-size:16px;flex:none;">03</div>
+          <div>
+            <div style="color:#fff;font-weight:500;font-size:20px;margin-bottom:0.5rem;">Pharma &amp; Precision Medicine</div>
+            <div style="color:rgba(255,255,255,0.65);font-size:15px;line-height:1.45;">We help pharmaceutical companies incorporate EEG data into clinical research, standardizing exams and generating evidence on how patients respond to treatment.</div>
+          </div>
+        </div>
+      </div>
+      <div style="color:rgba(255,255,255,0.5);font-size:13px;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1.5rem;">Impact</div>
+      <div style="display:flex;flex-direction:column;gap:1.8rem;">
+        <div>
+          <div style="color:#fff;font-weight:500;font-size:12vw;line-height:1;">60,000+</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:16px;margin-top:0.4rem;">hours of EEG processed</div>
+        </div>
+        <div>
+          <div style="color:#fff;font-weight:500;font-size:12vw;line-height:1;">4</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:16px;margin-top:0.4rem;">research papers &amp; publications</div>
+        </div>
+        <div>
+          <div style="color:#fff;font-weight:500;font-size:12vw;line-height:1;">12%</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:16px;margin-top:0.4rem;">of Brazilian neurophysiologists already use Neurogram</div>
         </div>
       </div>
     </section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        if (window.innerWidth <= 767) return;
-        if (window.gsap && window.ScrollTrigger) {
-          gsap.registerPlugin(ScrollTrigger);
-          ScrollTrigger.create({
-            trigger: document.getElementById('section-break'),
-            start: 'top top',
-            end: '+=70%',
-            pin: true,
-            pinSpacing: true,
-          });
-        }
-      });
-    </script>
-  </div>
   <section id="section-solutions" class="main-section work" data-mobile-bg="#F3F2F0" style="position: relative; z-index: 3;">
     <div class="w-layout-blockcontainer main-container full w-container">
       <div class="project-sticky">
@@ -2243,82 +2244,7 @@
       }
     })();
   </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.gsap && window.ScrollTrigger && window.innerWidth > 767) {
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-          trigger: document.getElementById('section-team'),
-          start: 'top top',
-          end: '+=70%',
-          pin: true,
-          pinSpacing: true,
-        });
-      }
-    });
-  </script>
-  <section id="section-cta" class="main-section" data-mobile-bg="#F3F2F0" style="position: relative; z-index: 3; display: none;">
-    <div style="display:none;opacity:0" class="contact-pop-up-wrap">
-      <div class="contact-pop-up-in">
-        <div class="contact-pop-up-close">
-          <div data-w-id="8816253e-62b7-f0ab-5c9b-921c0a10391e" class="contact-close-icon">close</div>
-        </div>
-        <div class="contact-pop-up-form">
-          <div class="w-form">
-            <form id="email-form" name="email-form" data-name="Email Form" method="get" data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103922" data-wf-page-id="69b9a4612d5d32ccced9e0f1" data-wf-element-id="8816253e-62b7-f0ab-5c9b-921c0a103922">
-              <div class="first-form-block">
-                <div class="pop-up-question center">
-                  <div class="question-title">What can we do for you?</div>
-                </div>
-                <div data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103929" class="pop-up-radio-button"><label class="radio-button-field w-radio"><input type="radio" name="Question1" id="Consulting" data-name="Question1" class="w-form-formradioinput radio-button w-radio-input" value="Consulting"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a10392c" class="radio-button-label q1 w-form-label" for="Consulting">Consulting</span></label><label class="radio-button-field w-radio"><input type="radio" name="Question1" id="Project" data-name="Question1" class="w-form-formradioinput radio-button w-radio-input" value="Project"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103930" class="radio-button-label q1 w-form-label" for="Project">Project</span></label></div>
-              </div>
-              <div style="display:none" class="mid-form-block">
-                <div class="pop-up-question center">
-                  <div class="question-title">What service do you need?</div>
-                </div>
-                <div data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103938" class="pop-up-radio-button"><label class="radio-button-field w-radio"><input type="radio" name="Question2" id="Website" data-name="Question2" class="w-form-formradioinput radio-button w-radio-input" value="Website"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a10393b" class="radio-button-label q2 w-form-label" for="Website">Website</span></label><label class="radio-button-field w-radio"><input type="radio" name="Question2" id="Branding" data-name="Question2" class="w-form-formradioinput radio-button w-radio-input" value="Branding"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a10393f" class="radio-button-label q2 w-form-label" for="Branding">Branding</span></label><label class="radio-button-field w-radio"><input type="radio" name="Question2" id="UI-UX" data-name="Question2" class="w-form-formradioinput radio-button w-radio-input" value="UI / UX"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103943" class="radio-button-label q2 w-form-label" for="UI-UX">UI / UX</span></label><label class="radio-button-field w-radio"><input type="radio" name="Question2" id="Development" data-name="Question2" class="w-form-formradioinput radio-button w-radio-input" value="Development"><span data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103947" class="radio-button-label q2 w-form-label" for="Development">Development</span></label></div>
-                <div class="pop-up-return-wrap">
-                  <div data-w-id="8816253e-62b7-f0ab-5c9b-921c0a10394a" class="pop-up-return-icon">arrow_back</div>
-                </div>
-              </div>
-              <div style="display:none" class="last-form-block">
-                <div class="pop-up-question">
-                  <div class="question-title">Fill out the form and we’ll get back to you soon</div>
-                </div><input class="contact-text-field w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="Your Name..." type="text" id="name-3"><input class="contact-text-field w-input" maxlength="256" name="email-3" data-name="Email 3" placeholder="Your Email..." type="email" id="email-3" required=""><textarea id="field" name="field" maxlength="5000" data-name="Field" placeholder="Project Detail..." class="contact-text-field area w-input"></textarea><input type="submit" data-wait="Please wait..." class="form-button w-button" value="Submit">
-                <div class="pop-up-return-wrap">
-                  <div data-w-id="8816253e-62b7-f0ab-5c9b-921c0a103957" class="pop-up-return-icon">arrow_back</div>
-                </div>
-              </div>
-            </form>
-            <div class="success-message w-form-done">
-              <div class="success-text">Thank you! Your submission has been received!</div>
-            </div>
-            <div class="error-message w-form-fail">
-              <div>Oops! Something went wrong while submitting the form.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="w-layout-blockcontainer main-container w-container">
-      <div class="cta-content">
-        <div class="cta-heading-wrap">
-          <div class="big-text cta">Let’s begin the project</div>
-        </div>
-        <div class="cta-button-wrap">
-          <a data-w-id="76905373-d5fd-0fc2-381b-bc90e13d7791" href="#section-cta" class="button-slide w-inline-block">
-            <div class="button-slide-in-wrap">
-              <div style="-webkit-transform:translate3d(-300%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(-300%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(-300%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(-300%, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="button-bg-wrap">
-                <div aria-hidden="true" style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-14deg, 0);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-14deg, 0);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-14deg, 0);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(-14deg, 0)" class="button-bg"></div>
-              </div>
-              <div class="button-slide-text">Work with us</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="cta-bg-separator"></div>
-  </section>
+
   <div id="footer" class="main-section footer" data-mobile-bg="#07090a">
     <div class="w-layout-blockcontainer main-container w-container">
       <div class="foter-inner-wrap">
@@ -2331,9 +2257,9 @@
               <a href="index.html" aria-current="page" class="footer-page w-inline-block w--current">
                 <div class="footer-text">Home</div>
               </a>
-              <div class="footer-page no-hover">
+              <a href="#section-mission" class="footer-page w-inline-block">
                 <div class="footer-text">About</div>
-              </div>
+              </a>
             </div>
             <div class="footer-menu-pages mobile-nav">
               <a href="https://lp.neurogram.com" class="footer-page w-inline-block">
@@ -2351,12 +2277,9 @@
               <a href="https://lp.neurogram.com" class="footer-page w-inline-block">
                 <div class="footer-text">EEG Platform</div>
               </a>
-              <a href="https://storage.googleapis.com/neurogram-assets/lp/terms-2024-08-14/pt-privacy-policy-2024-05-14.pdf" class="footer-page w-inline-block">
-                <div class="footer-text">Privacy Policy</div>
-              </a>
-              <a href="https://storage.googleapis.com/neurogram-assets/lp/terms-2024-08-14/pt-terms-of-use-2024-05-14.pdf" class="footer-page w-inline-block">
-                <div class="footer-text">Terms of Service</div>
-              </a>
+              <div class="footer-page no-hover">
+                <div class="footer-text">Neurovital</div>
+              </div>
             </div>
             <div class="footer-menu-pages edge-border">
               <div class="footer-text" style="color:#8d8d8d;">Contact</div>
@@ -2508,7 +2431,6 @@
         ['#section-context .why-us-title', '#section-context .why-us-card'],
         ['#section-question-mobile .question-mobile-title'],
         ['#section-why #why-main-title', '#section-why .intro-text-small', '#section-why .project-card'],
-        ['#section-break-mobile > div > div:nth-child(1)', '#section-break-mobile > div > div:nth-child(2)', '#section-break-mobile > div > div:nth-child(3)'],
         ['#section-solutions .project-work-image-wrap, #section-solutions .project-work-image-wrap-2'],
         ['#section-solutions .project-work-text > div:first-child', '#section-solutions .project-work-text > div:last-child'],
         ['#section-media .big-text', '#section-media .media-card'],
@@ -2568,7 +2490,7 @@
   let lenis;
   const initScroll = () => {
     if (window.innerWidth <= 767) return; // scroll nativo + snap no mobile
-    lenis = new Lenis({});
+    lenis = new Lenis({ duration: 0.7, wheelMultiplier: 1.15, touchMultiplier: 1.4 });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => lenis.raf(time * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -2615,11 +2537,6 @@
     const resizeObserver = new ResizeObserver((entries) => onResize());
     resizeObserver.observe(document.body);
     queueMicrotask(() => {
-      gsap.to("[data-start='hidden']", {
-        autoAlpha: 1,
-        duration: 0.1,
-        delay: 0.2,
-      });
     });
   }
   // this only for dev
@@ -2666,9 +2583,10 @@ document.querySelectorAll(".why-us-card").forEach(card => {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var STORAGE_KEY = 'neurogram-site-lang';
-  var currentLang = 'en';
+  var currentLang = 'pt';
 
   var textMap = {
+    'EEG platform': 'Nossa plataforma',
     'Solutions': 'Soluções',
     'Contact': 'Contato',
     'About': 'Sobre',
@@ -2769,13 +2687,93 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     {
       selector: '[data-w-id="d2cbc0df-e302-3a69-273f-6afb7167698f"]',
-      en: '<span style="font-weight:500;">smarter</span> and <span style="font-weight:500;">accessible</span>',
-      pt: 'inteligente e acessível'
+      en: '<span style="font-weight:500;color:#67922F;">smarter</span> and <span style="font-weight:500;color:#314719;">accessible</span>',
+      pt: '<span style="font-weight:500;color:#67922F;">inteligente</span> e <span style="font-weight:500;color:#314719;">acessível</span>'
     },
     {
       selector: '[data-w-id="438582fe-9cc4-0cf1-7453-01cca42ef2fa"]',
       en: 'neurophysiology',
       pt: ''
+    },
+    {
+      selector: '.value-eyebrow',
+      en: 'What we do',
+      pt: 'O que fazemos'
+    },
+    {
+      selector: '.team-title',
+      en: '<span style="font-weight:400 !important;">The</span> team',
+      pt: '<span style="font-weight:400 !important;">O</span> time'
+    },
+    {
+      selector: '.value-heading',
+      en: 'Where we create value',
+      pt: 'Onde geramos valor'
+    },
+    {
+      selector: '.value-item-1-title',
+      en: 'Hospitals &amp; Clinics',
+      pt: 'Hospitais e Clínicas'
+    },
+    {
+      selector: '.value-item-1-desc',
+      en: 'Neurogram connects the entire EEG journey in a single platform — cutting manual work, accelerating diagnostics, and extending efficiency from routine exams to ICU monitoring.',
+      pt: 'A Neurogram conecta toda a jornada do EEG em uma única plataforma, reduzindo processos manuais, acelerando diagnósticos e ampliando a eficiência — dos exames de rotina à monitorização em UTI.'
+    },
+    {
+      selector: '.value-item-2-title',
+      en: 'Research',
+      pt: 'Pesquisa'
+    },
+    {
+      selector: '.value-item-2-desc',
+      en: 'We support universities and research centers in organizing and analyzing EEG data — accelerating studies, biomarker discovery, and the development of new technologies.',
+      pt: 'Apoiamos universidades e centros de pesquisa na organização e análise de dados de EEG, acelerando estudos, a descoberta de biomarcadores e o desenvolvimento de novas tecnologias.'
+    },
+    {
+      selector: '.value-item-3-title',
+      en: 'Pharma &amp; Precision Medicine',
+      pt: 'Farmacêuticas e Medicina de Precisão'
+    },
+    {
+      selector: '.value-item-3-desc',
+      en: 'We help pharmaceutical companies incorporate EEG data into clinical research, standardizing exams and generating evidence on how patients respond to treatment.',
+      pt: 'Ajudamos a indústria farmacêutica a incorporar dados de EEG em pesquisas clínicas, padronizando exames e gerando evidências sobre a resposta dos pacientes aos tratamentos.'
+    },
+    {
+      selector: '.value-stats-label',
+      en: 'Impact',
+      pt: 'Impacto'
+    },
+    {
+      selector: '.value-stat-1-num',
+      en: '60,000+',
+      pt: '+60 mil'
+    },
+    {
+      selector: '.value-stat-1-label',
+      en: 'hours of EEG processed',
+      pt: 'horas de EEG processadas'
+    },
+    {
+      selector: '.value-stat-2-num',
+      en: '4',
+      pt: '4'
+    },
+    {
+      selector: '.value-stat-2-label',
+      en: 'research papers &amp; publications',
+      pt: 'publicações e estudos científicos'
+    },
+    {
+      selector: '.value-stat-3-num',
+      en: '12%',
+      pt: '12%'
+    },
+    {
+      selector: '.value-stat-3-label',
+      en: 'of Brazilian neurophysiologists already use Neurogram',
+      pt: 'dos neurofisiologistas brasileiros já usam a Neurogram'
     },
     {
       selector: '.mission-mobile-text',
@@ -3124,7 +3122,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (mobileToggle) mobileToggle.addEventListener('click', toggleLanguage);
 
   var savedLang = localStorage.getItem(STORAGE_KEY);
-  var initialLang = savedLang || 'en';
+  var initialLang = savedLang || 'pt';
   applyLanguage(initialLang);
 });
 </script>
