@@ -1283,7 +1283,7 @@ figure {
   grid-column-gap: 25vw;
   grid-row-gap: 25vw;
   flex-flow: column;
-  height: 600vh;
+  height: 100vh;
   display: flex;
 }
 
@@ -3148,10 +3148,10 @@ figure {
   }
 
   .big-text {
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     font-family: 'NeueHaasDisplay', sans-serif;
     font-size: 1.75rem;
-    font-weight: 400;
+    font-weight: 500 !important;
     line-height: 2rem;
   }
 
@@ -4630,7 +4630,8 @@ figure {
   /* ===== SECTION BREAK MOBILE ===== */
   #section-break-mobile {
     display: flex !important;
-    height: 100vh !important;
+    height: auto !important;
+    min-height: 100vh !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
     padding: 3rem 1.5rem 2rem !important;
@@ -4683,11 +4684,11 @@ figure {
   }
 
   #section-solutions .project-sticky {
-    position: static !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    flex: 0 0 100vh !important;
-    margin-bottom: 0 !important;
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    flex: none !important;
+    margin-bottom: 2rem !important;
     display: flex !important;
     flex-direction: column !important;
     overflow: hidden !important;
@@ -4740,6 +4741,12 @@ figure {
     overflow: visible !important;
     scroll-snap-align: start !important;
     scroll-snap-stop: always !important;
+  }
+
+  #section-media .media-inner {
+    height: auto !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
   }
 
   #section-media .media-left {
@@ -4903,9 +4910,8 @@ figure {
     }
   }
 
-  /* Mission section animation */
+  /* Mission section: sem animação, estático */
   #section-mission-mobile > div {
-    animation: fadeInUp 0.8s ease-out forwards;
   }
 
   /* Context section title animation */
@@ -5330,11 +5336,6 @@ figure {
   }
 
   /* Opacity and filter subtleties */
-  .big-text {
-    font-weight: 500 !important;
-    letter-spacing: -0.01em !important;
-  }
-
   span[style*="font-weight:500"] {
     font-weight: 500 !important;
   }
@@ -5349,7 +5350,7 @@ figure {
   }
 
   #section-break-mobile {
-    padding: 3rem 1.5rem 2rem !important;
+    padding: 3rem 1.5rem 3.5rem !important;
   }
 
   #section-solutions {
@@ -5378,6 +5379,52 @@ figure {
 
   .media-card-headline {
     transition: color 0.2s ease-out;
+  }
+}
+
+/* Tablet gap fix (768-991px): the mobile reflow above stops at 767px, so
+   #section-context fell back to the desktop 50%-width card column, which
+   is far too narrow on a tablet screen, plus the desktop scroll-driven
+   dark overlay stayed visible (it's only hidden in the 767px block). */
+@media (min-width: 768px) and (max-width: 991px) {
+  #section-context .why-us-sticky {
+    position: static !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #section-context .why-us-title {
+    height: auto !important;
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    font-size: clamp(1.5rem, 4vw, 2.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  #section-context .why-us-content {
+    width: 100% !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    flex-direction: column !important;
+  }
+
+  #section-context .why-us-card {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+  }
+
+  #section-context-overlay {
+    display: none !important;
   }
 }
 
@@ -5438,9 +5485,9 @@ figure {
 }
 
 #section-break .w-layout-blockcontainer {
-  height: 100% !important;
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
+  align-items: center !important;
 }
 
 /* Media Section */
